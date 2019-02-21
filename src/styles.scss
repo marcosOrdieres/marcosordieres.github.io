@@ -1,0 +1,207 @@
+@font-face {
+   font-family: 'Roboto Slab';
+   font-style: normal;
+   font-weight: 50;
+   src: url('./assets/fonts/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+   font-family: 'Roboto Slab Slim';
+   font-style: normal;
+   font-weight: 30;
+   src: url('./assets/fonts/RobotoSlab-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f6f7f8;
+  color: #393c45;
+}
+
+.home {
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1.3;
+  background-image: url(./public/images/imageBackgroundSmall.png);
+  background-size:cover;
+  opacity: 0.8;
+}
+
+.name {
+  padding-top: 1%;
+  left: 1%;
+  font-family: 'Roboto Slab Slim';
+  color: #f6f7f8;
+  font-weight: 5;
+  font-size: 0.5em;
+  position: absolute;
+  opacity: 0.5
+  //border:1px solid #f6f7f8;
+}
+
+.iconGithub {
+  padding-left:  5%;
+  padding-right:  5%;
+  color: #f6f7f8;
+  opacity: 0.5
+}
+
+.iconLinkedin {
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #f6f7f8;
+  opacity: 0.5
+}
+
+.iconEmail {
+  padding-left: 5%;
+  padding-right:  5%;
+  color: #f6f7f8;
+  opacity: 0.5
+}
+
+.iconPlay{
+  padding-left:  5%;
+  padding-right:  5%;
+  color: #f6f7f8;
+  opacity: 0.5
+}
+
+.iconsWork {
+  padding-top: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+  width: '60%';
+  left: 80%;
+  position: absolute;
+}
+
+.iconOnly{
+  padding: 10px 10px 10px 10px;
+}
+
+.middleText {
+  text-align: center;
+  color: #f6f7f8;
+  font-size: 5em;
+  font-family: 'Roboto Slab';
+}
+
+.secondPartText {
+  color: #262626;
+  font-size: 5em;
+  font-family: 'Roboto Slab';
+}
+
+#word {
+  font-family: 'Roboto Slab Slim';
+  color: #ffc84c;
+  padding-top: 20px;
+  font-weight: 10;
+  font-size: 2em;}
+
+.rowText {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+  //display: table-cell;
+  vertical-align: middle;
+  width: 500px;
+  line-height: 90px;
+  //border:1px solid yellow;
+}
+.nameTitle{
+  color: #ffc84c;
+}
+
+.secondPart{
+  margin-top: 100vmin;
+  height: 1000px;
+}
+
+
+.secondPart{
+  display: flex;
+  flex-direction: column;
+}
+
+.firstCol{
+  //background-color: red;
+  display: flex;
+  flex-direction: column;
+  flex: 0.3;
+  text-align: center;
+  justify-content: center;
+}
+
+.secondCol{
+  flex: 0.35;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.thirdCol{
+  flex: 0.35;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.titleText {
+  flex: 1;
+  //background-color: green;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.subtitleText {
+  flex: 1;
+  justify-content: center;
+}
+
+.backpackerProject{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8c8c8c;
+}
+
+.bombProject{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7f8;}
+
+.ghostProject{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7f8;}
+
+.tableProject{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8c8c8c;}
