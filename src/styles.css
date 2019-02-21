@@ -83,9 +83,14 @@ body {
   font-size: 5em;
   font-family: 'Roboto Slab'; }
 
-.secondPartText {
-  color: #262626;
-  font-size: 5em;
+.secondPartTitle {
+  color: white;
+  font-size: 4em;
+  font-family: 'Roboto Slab'; }
+
+.secondPartSubtitle {
+  color: white;
+  font-size: 1.5em;
   font-family: 'Roboto Slab'; }
 
 #word {
@@ -119,7 +124,8 @@ body {
   flex-direction: column;
   flex: 0.3;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #5856d6; }
 
 .secondCol {
   flex: 0.35;

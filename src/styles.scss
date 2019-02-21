@@ -96,9 +96,15 @@ body {
   font-family: 'Roboto Slab';
 }
 
-.secondPartText {
-  color: #262626;
-  font-size: 5em;
+.secondPartTitle {
+  color: white;
+  font-size: 4em;
+  font-family: 'Roboto Slab';
+}
+
+.secondPartSubtitle{
+  color: white;
+  font-size: 1.5em;
   font-family: 'Roboto Slab';
 }
 
@@ -117,6 +123,7 @@ body {
   vertical-align: middle;
   width: 500px;
   line-height: 90px;
+
   //border:1px solid yellow;
 }
 .nameTitle{
@@ -141,6 +148,8 @@ body {
   flex: 0.3;
   text-align: center;
   justify-content: center;
+  background-color: #5856d6;
+
 }
 
 .secondCol{
