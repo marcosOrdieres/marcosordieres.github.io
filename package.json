@@ -69,7 +69,8 @@
     "eslint-plugin-flowtype": "^2.33.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^5.0.1",
-    "eslint-plugin-react": "^7.0.1"
+    "eslint-plugin-react": "^7.0.1",
+    "pre-push": "^0.1.1"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -111,5 +112,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage" : "https://marcosordieres.github.io/portfolio"
+  "homepage": "https://marcosordieres.github.io/portfolio",
+  "pre-push": [
+    "build"
+  ]
 }
