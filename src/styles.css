@@ -79,18 +79,15 @@ body {
 
 .middleText {
   text-align: center;
-  color: #f6f7f8;
   font-size: 5em;
   font-family: 'Roboto Slab'; }
 
 .secondPartTitle {
-  color: white;
-  font-size: 4em;
+  font-size: 3em;
   font-family: 'Roboto Slab'; }
 
 .secondPartSubtitle {
-  color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Roboto Slab'; }
 
 #word {
@@ -124,8 +121,7 @@ body {
   flex-direction: column;
   flex: 0.3;
   text-align: center;
-  justify-content: center;
-  background-color: #5856d6; }
+  justify-content: center; }
 
 .secondCol {
   flex: 0.35;
@@ -166,7 +162,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #f6f7f8; }
+  background-color: #ffc84c; }
 
 .ghostProject {
   flex: 1;
@@ -174,7 +170,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #f6f7f8; }
+  background-color: #ffc84c; }
 
 .tableProject {
   flex: 1;
