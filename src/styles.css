@@ -49,12 +49,15 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: red; }
+  background-color: #595959;
+  display: flex;
+  flex-direction: column; }
 
 .contactMe {
-  flex: table-cell;
+  display: flex;
   position: absolute;
   vertical-align: middle;
+  flex-direction: column;
   top: 0;
   left: 0;
   height: 100%;
@@ -64,26 +67,25 @@ body {
 .contact {
   display: flex;
   flex: 0.8;
-  flex-direction: column;
   background-color: blue;
   text-align: center;
+  flex-direction: row;
   justify-content: center; }
 
 .footer {
   display: flex;
   flex: 0.2;
-  background-color: black;
-  flex-direction: column; }
+  background-color: #333333; }
 
 .contactEmail {
   display: flex;
   flex: 0.5;
-  background-color: green; }
+  background-color: #3a6ee8; }
 
 .contactPlace {
   display: flex;
   flex: 0.5;
-  background-color: blue; }
+  background-color: white; }
 
 .name {
   padding-top: 1%;
@@ -135,7 +137,8 @@ body {
 .middleText {
   text-align: center;
   font-size: 5em;
-  font-family: 'Roboto Slab'; }
+  font-family: 'Roboto Slab';
+  color: #bfbfbf; }
 
 .secondPartTitle {
   font-size: 3em;
@@ -166,33 +169,33 @@ body {
 .firstCol {
   display: flex;
   flex-direction: column;
-  flex: 0.3;
+  flex: 0.45;
   text-align: center;
   justify-content: center; }
 
 .secondCol {
-  flex: 0.35;
+  flex: 0.3;
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: center; }
 
 .thirdCol {
-  flex: 0.35;
+  flex: 0.3;
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: center; }
 
 .titleText {
-  flex: 1;
+  flex: 0.5;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center; }
 
 .subtitleText {
-  flex: 1;
+  flex: 0.5;
   justify-content: center; }
 
 .backpackerProject {
@@ -200,29 +203,64 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  background-color: #8c8c8c; }
+  align-items: center; }
 
 .bombProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  background-color: #ffc84c; }
+  align-items: center; }
 
 .ghostProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  background-color: #ffc84c; }
+  align-items: center; }
 
 .tableProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center; }
+
+.textExperience {
+  display: flex;
+  flex-direction: column;
+  flex: 0.5; }
+
+.photosExperience {
+  display: flex;
+  flex-direction: row;
+  flex: 0.5; }
+
+.textExperienceTitle {
+  display: flex;
+  flex: 0.5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.textExperienceSubtitle {
+  display: flex;
+  flex: 0.5; }
+
+.photosExperienceFirst {
+  display: flex;
+  flex: 0.333; }
+
+.photosExperienceSecond {
+  display: flex;
+  flex: 0.333; }
+
+.photosExperienceThird {
+  display: flex;
+  flex: 0.333; }
+
+.textExperienceTitleP {
+  font-size: 3em;
   align-items: center;
-  background-color: #8c8c8c; }
+  font-family: 'Roboto Slab';
+  color: white; }

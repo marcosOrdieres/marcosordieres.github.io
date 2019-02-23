@@ -92,21 +92,25 @@ class Home extends Component {
   }
 
   onMouseLeaveHandler (value) {
-    this.setState({hoverValueProject: false});
-    document.getElementById(value).style.opacity = 1;
+    const valueForLeaveHover = document.getElementById(value);
+    this.setState({hoverValue: false});
+    valueForLeaveHover.style.opacity = 0.5;
+    valueForLeaveHover.style.cursor = 'cursor';
   }
 
   onMouseEnterHandlerProject (value) {
     const valueForHover = document.getElementById(value);
     this.setState({hoverValueProject: true});
     valueForHover.style.opacity = 0.5;
-    valueForHover.style.opacity = 0.5;
+    valueForHover.style.backgroundColor = '#8c8c8c';
     valueForHover.style.cursor = 'pointer';
   }
 
   onMouseLeaveHandlerProject (value) {
-    this.setState({hoverValue: false});
-    document.getElementById(value).style.opacity = 1;
+    const valueForLeaveHover = document.getElementById(value);
+    this.setState({hoverValueProject: false});
+    valueForLeaveHover.style.opacity = 1;
+    valueForLeaveHover.style.backgroundColor = '#f6f7f8';
   }
 
   render () {
@@ -122,16 +126,16 @@ class Home extends Component {
 
           <div id='iconsWork' className='iconsWork'>
             <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
-              <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+              <FontAwesomeIcon icon={['fab', 'github']} size='2x' />
             </div>
             <div className='iconLinkedin' id='iconLinkedin' onClick={this.valueOnClick.bind(this, 'iconLinkedin')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconLinkedin')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconLinkedin')}>
-              <FontAwesomeIcon icon={['fab', 'linkedin']} size='3x' />
+              <FontAwesomeIcon icon={['fab', 'linkedin']} size='2x' />
             </div>
             <div className='iconEmail' id='iconEmail' onClick={this.valueOnClick.bind(this, 'iconEmail')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconEmail')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconEmail')}>
-              <FontAwesomeIcon icon='envelope' size='3x' />
+              <FontAwesomeIcon icon='envelope' size='2x' />
             </div>
             <div className='iconPlay' id='iconPlay' onClick={this.valueOnClick.bind(this, 'iconPlay')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlay')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlay')}>
-              <FontAwesomeIcon icon={['fab', 'google-play']} size='3x' />
+              <FontAwesomeIcon icon={['fab', 'google-play']} size='2x' />
             </div>
           </div>
           <div className='rowText'>
@@ -146,6 +150,7 @@ class Home extends Component {
             <Compare products={compareProducts}/>
           } */}
         </div>
+
         <div className='secondPart'>
           <div className='firstCol'>
             <div className='titleText'>
@@ -161,36 +166,49 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'backpackerProject')}>
               {/* {this.state.isPhone ? <div className="rectangleBackpackerProject"></div> : <div className="rectangleBackpackerProject"></div>} */}
               <div>
-                <img src={imageBackpacker} width='40%' height='110%' />
+                <img src={imageBackpacker} width='40%' height='100%' />
               </div>
             </div>
             <div className='bombProject' id='bombProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'bombProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'bombProject')}>
               <div>
-                <img src={imageBomb} width='40%' height='110%' />
+                <img src={imageBomb} width='40%' height='100%' />
               </div>
             </div>
+
           </div>
           <div className='thirdCol'>
             <div className='ghostProject' id='ghostProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
               <div>
-                <img src={imageGhost} width='40%' height='110%' />
+                <img src={imageGhost} width='40%' height='100%' />
               </div>
             </div>
             <div className='tableProject' id='tableProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'tableProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'tableProject')}>
               <div>
-                <img src={imageBackpacker} width='40%' height='110%' />
+                <img src={imageBackpacker} width='40%' height='100%' />
               </div>
             </div>
           </div>
         </div>
 
-        <div className='experience' />
+        <div className='experience'>
+          <div className='textExperience'>
+            <div className='textExperienceTitle'>
+              <h2 className='textExperienceTitleP'>Experience</h2>
+            </div>
+            <div className='textExperienceSubtitle' />
+          </div>
+          <div className='photosExperience'>
+            <div className='photosExperienceFirst' />
+            <div className='photosExperienceSecond' />
+            <div className='photosExperienceThird' />
+          </div>
+        </div>
 
         <div className='contactMe'>
           <div className='contact'>
