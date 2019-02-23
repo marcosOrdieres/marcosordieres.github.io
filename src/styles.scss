@@ -34,7 +34,8 @@ body {
   opacity: 0.8;
 }
 
-.experience {
+.secondPart{
+  margin-top: 100vmin;
   display: table-cell;
   position: absolute;
   vertical-align: middle;
@@ -42,11 +43,60 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.experience {
   margin-top: 200vmin;
-  opacity: 1.3;
-  //background-image: url(./public/images/imageBackgroundSmall.png);
-  background-size:cover;
-  opacity: 0.8;
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.contactMe {
+  flex: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 300vmin;
+  //background-color: blue;
+}
+
+.contact {
+  display: flex;
+  flex: 0.8;
+  flex-direction: column;
+  background-color: blue;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex: 0.2;
+  background-color: black;
+  flex-direction: column;
+
+}
+
+.contactEmail {
+  display: flex;
+  flex: 0.5;
+  background-color: green;
+
+}
+
+.contactPlace {
+  display: flex;
+  flex: 0.5;
+  background-color: blue;
 }
 
 .name {
@@ -142,19 +192,7 @@ body {
   color: #ffc84c;
 }
 
-.secondPart{
-  margin-top: 100vmin;
-  height: 1000px;
-}
-
-
-.secondPart{
-  display: flex;
-  flex-direction: column;
-}
-
 .firstCol{
-  //background-color: red;
   display: flex;
   flex-direction: column;
   flex: 0.3;

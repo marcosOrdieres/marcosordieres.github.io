@@ -192,6 +192,13 @@ class Home extends Component {
 
         <div className='experience' />
 
+        <div className='contactMe'>
+          <div className='contact'>
+            <div className='contactEmail' />
+            <div className='contactPlace' />
+          </div>
+          <div className='footer' />
+        </div>
       </div>
 
     );
