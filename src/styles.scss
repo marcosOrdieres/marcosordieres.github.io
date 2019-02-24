@@ -34,7 +34,8 @@ body {
   opacity: 0.8;
 }
 
-.experience {
+.secondPart{
+  margin-top: 100vmin;
   display: table-cell;
   position: absolute;
   vertical-align: middle;
@@ -42,11 +43,66 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.experience {
   margin-top: 200vmin;
-  opacity: 1.3;
-  //background-image: url(./public/images/imageBackgroundSmall.png);
-  background-size:cover;
-  opacity: 0.8;
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #595959;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMe {
+  display: flex;
+  position: absolute;
+  vertical-align: middle;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 300vmin;
+}
+
+.contact {
+  display: flex;
+  flex: 0.8;
+  background-color: blue;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex: 0.2;
+  background-color: #333333;
+
+}
+
+.contactEmail {
+  display: flex;
+  flex: 0.5;
+  background-color: #3a6ee8;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactPlace {
+  display: flex;
+  flex: 0.5;
+  background-color: white;
 }
 
 .name {
@@ -108,6 +164,7 @@ body {
   text-align: center;
   font-size: 5em;
   font-family: 'Roboto Slab';
+  color: #bfbfbf;
 }
 
 .secondPartTitle {
@@ -135,35 +192,21 @@ body {
   vertical-align: middle;
   width: 500px;
   line-height: 90px;
-
-  //border:1px solid yellow;
 }
 .nameTitle{
   color: #ffc84c;
 }
 
-.secondPart{
-  margin-top: 100vmin;
-  height: 1000px;
-}
-
-
-.secondPart{
-  display: flex;
-  flex-direction: column;
-}
-
 .firstCol{
-  //background-color: red;
   display: flex;
   flex-direction: column;
-  flex: 0.3;
+  flex: 0.25;
   text-align: center;
   justify-content: center;
 }
 
 .secondCol{
-  flex: 0.35;
+  flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -171,7 +214,7 @@ body {
 }
 
 .thirdCol{
-  flex: 0.35;
+  flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -179,17 +222,21 @@ body {
 }
 
 .titleText {
-  flex: 1;
-  //background-color: green;
+  flex: 0.5;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  align-items: flex-end;
+  flex-direction: flex-end;
+  text-align: flex-end;
 }
 
 .subtitleText {
-  flex: 1;
+  flex: 0.5;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .backpackerProject{
@@ -198,7 +245,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #8c8c8c;
 }
 
 .bombProject{
@@ -207,7 +253,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #ffc84c;}
+}
 
 .ghostProject{
   flex: 1;
@@ -215,7 +261,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #ffc84c;}
+}
 
 .tableProject{
   flex: 1;
@@ -223,4 +269,89 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #8c8c8c;}
+}
+
+.textExperience {
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+}
+
+.photosExperience {
+  display: flex;
+  flex-direction: row;
+  flex: 0.5;
+}
+
+.textExperienceTitle {
+  display: flex;
+  flex: 0.5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.textExperienceTitle p {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.textExperienceSubtitle {
+  display: flex;
+  flex: 0.5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.photosExperienceFirst {
+  display: flex;
+  flex: 0.333;
+}
+.photosExperienceSecond {
+  display: flex;
+  flex: 0.333;
+}
+.photosExperienceThird {
+  display: flex;
+  flex: 0.333;
+}
+
+.textExperienceTitleP{
+  font-size: 3em;
+  align-items: center;
+  font-family: 'Roboto Slab';
+  color: white;
+}
+
+.textExperienceUnderscore{
+  font-size: 1em;
+  color: #ffc84c;
+}
+
+.textExperienceSubtitleP{
+  font-size: 1.2em;
+  align-items: center;
+  font-family: 'Roboto Slab';
+  color: white;
+}
+
+.contactEmailRectangle{
+  width: 60%;
+  height: 20%;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactEmailP{
+  font-size: 3em;
+  font-family: 'Roboto Slab';
+  color: white;
+  text-align: center;
+  padding-top: 5%;
+}
