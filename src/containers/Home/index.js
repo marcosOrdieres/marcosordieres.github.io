@@ -8,6 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import imageBackpacker from '../../public/images/photoApp.png';
 import imageGhost from '../../public/images/ghost.png';
 import imageBomb from '../../public/images/bomb.png';
+import pokeImage from '../../public/images/pokeImage.png';
+
+import shineImage from '../../public/images/shine.png';
+import capgeminiImage from '../../public/images/capgemini.png';
+import prometeoImage from '../../public/images/prometeo.png';
+
+import GoogleMapReact from 'google-map-react';
 
 const words = ['Full Stack Developer', 'Front-End Developer', 'React Native Developer', 'GIS Specialist'];
 let i = 0;
@@ -132,6 +139,15 @@ class Home extends Component {
     valueForLeaveHover.style.cursor = 'cursor';
   }
 
+  renderMarkers (map, maps) {
+    let marker = new maps.Marker({
+      position: {lat: 52.560103, lng: 13.414957},
+      icon: pokeImage,
+      map
+      // title: 'Hello World!'
+    });
+  }
+
   render () {
     // const {products, actions} = this.props;
     // const compareProducts = products.filter(product => product.compare);
@@ -185,14 +201,14 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'backpackerProject')}>
               {/* {this.state.isPhone ? <div className="rectangleBackpackerProject"></div> : <div className="rectangleBackpackerProject"></div>} */}
               <div>
-                <img src={imageBackpacker} width='40%' height='100%' />
+                <img src={imageBackpacker} width='35%' height='70%' />
               </div>
             </div>
             <div className='bombProject' id='bombProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'bombProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'bombProject')}>
               <div>
-                <img src={imageBomb} width='40%' height='100%' />
+                <img src={imageBomb} width='35%' height='70%' />
               </div>
             </div>
 
@@ -202,14 +218,14 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
               <div>
-                <img src={imageGhost} width='40%' height='100%' />
+                <img src={imageGhost} width='35%' height='70%' />
               </div>
             </div>
             <div className='tableProject' id='tableProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'tableProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'tableProject')}>
               <div>
-                <img src={imageBackpacker} width='40%' height='100%' />
+                <img src={imageBackpacker} width='35%' height='70%' />
               </div>
             </div>
           </div>
@@ -227,9 +243,18 @@ class Home extends Component {
             </div>
           </div>
           <div className='photosExperience'>
-            <div className='photosExperienceFirst' />
-            <div className='photosExperienceSecond' />
-            <div className='photosExperienceThird' />
+            <div className='photosExperienceFirst'>
+              <img className='imageJobs' src={shineImage} width='20%' height='40%' />
+            </div>
+            <div className='photosExperienceSecond'>
+              <img className='imageJobs' src={capgeminiImage} width='80%' height='40%' />
+
+            </div>
+
+            <div className='photosExperienceThird'>
+              <img className='imageJobs' src={prometeoImage} width='50%' height='20%' />
+            </div>
+
           </div>
         </div>
 
@@ -240,7 +265,13 @@ class Home extends Component {
                 onMouseEnter={this.onMouseEnterHandlerEmail.bind(this, 'contactEmailRectangle', 'contactEmailP')}
                 onMouseLeave={this.onMouseLeaveHandlerEmail.bind(this, 'contactEmailRectangle', 'contactEmailP')}><p className='contactEmailP' id='contactEmailP'>Contact Me</p></div>
             </div>
-            <div className='contactPlace' />
+            <div className='contactPlace'>
+              <GoogleMapReact
+                bootstrapURLKeys={{ key: 'AIzaSyCda4COyVGH-JN8o5cdS6UcRT7FKwSn91Y' }}
+                onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
+                defaultCenter={{lat: 52.560103, lng: 13.414957}}
+                defaultZoom={11} />
+            </div>
           </div>
           <div className='footer' />
         </div>
