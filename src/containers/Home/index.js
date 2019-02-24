@@ -185,7 +185,6 @@ class Home extends Component {
             <Compare products={compareProducts}/>
           } */}
         </div>
-
         <div className='secondPart'>
           <div className='firstCol'>
             <div className='titleText'>
