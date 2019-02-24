@@ -19,7 +19,8 @@ class Home extends Component {
 
     this.state = {
       hoverValue: false,
-      hoverValueProject: false
+      hoverValueProject: false,
+      hoverValueEmail: false
     };
   }
 
@@ -111,6 +112,23 @@ class Home extends Component {
     this.setState({hoverValueProject: false});
     valueForLeaveHover.style.opacity = 1;
     valueForLeaveHover.style.backgroundColor = '#f6f7f8';
+  }
+
+  onMouseEnterHandlerEmail (value, p) {
+    console.log(value, p);
+    const valueForHover = document.getElementById(value);
+    const valueForHoverP = document.getElementById(p);
+    this.setState({hoverValueEmail: true});
+    valueForHover.backgroundColor = 'white';
+    valueForHoverP.color = 'black';
+  }
+
+  onMouseLeaveHandlerEmail (value, p) {
+    const valueForLeaveHover = document.getElementById(value);
+    const valueForLeaveHoverP = document.getElementById(p);
+    this.setState({hoverValueEmail: false});
+    valueForLeaveHover.backgroundColor = '#3a6ee8';
+    valueForLeaveHoverP.color = 'white';
   }
 
   render () {
@@ -212,7 +230,11 @@ class Home extends Component {
 
         <div className='contactMe'>
           <div className='contact'>
-            <div className='contactEmail' />
+            <div className='contactEmail'>
+              <div className='contactEmailRectangle'id='contactEmailRectangle'
+                onMouseEnter={this.onMouseEnterHandlerEmail.bind(this, 'contactEmailRectangle', 'contactEmailP')}
+                onMouseLeave={this.onMouseLeaveHandlerEmail.bind(this, 'contactEmailRectangle', 'contactEmailP')}><p className='contactEmailP' id='contactEmailP'>Contact Me</p></div>
+            </div>
             <div className='contactPlace' />
           </div>
           <div className='footer' />

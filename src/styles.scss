@@ -91,7 +91,9 @@ body {
   display: flex;
   flex: 0.5;
   background-color: #3a6ee8;
-
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactPlace {
@@ -303,4 +305,25 @@ body {
   align-items: center;
   font-family: 'Roboto Slab';
   color: white;
+}
+
+.contactEmailRectangle{
+  width: 60%;
+  height: 20%;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactEmailP{
+  font-size: 3em;
+  font-family: 'Roboto Slab';
+  color: white;
+  text-align: center;
+  padding-top: 5%;
 }
