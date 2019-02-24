@@ -266,15 +266,27 @@ body {
 
 .photosExperienceFirst {
   display: flex;
-  flex: 0.333; }
+  flex: 0.333;
+  align-items: center;
+  justify-content: center;
+  background-color: white; }
 
 .photosExperienceSecond {
   display: flex;
-  flex: 0.333; }
+  flex: 0.333;
+  align-items: center;
+  justify-content: center;
+  background-color: white; }
 
 .photosExperienceThird {
   display: flex;
-  flex: 0.333; }
+  flex: 0.333;
+  align-items: center;
+  justify-content: center;
+  background-color: white; }
+
+.imageJobs {
+  opacity: 0.5; }
 
 .textExperienceTitleP {
   font-size: 3em;
