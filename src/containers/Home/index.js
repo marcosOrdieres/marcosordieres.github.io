@@ -188,7 +188,7 @@ class Home extends Component {
         <div className='secondPart'>
           <div className='firstCol'>
             <div className='titleText'>
-              <h2 className='secondPartTitle'>Work</h2>
+              <p className='secondPartTitle'>Work<p className='textTitleUnderscore'>_</p></p>
             </div>
             <div className='subtitleText'>
               <h2 className='secondPartSubtitle'>As a Software Developer based in Berlin, I am able to produce high quality responsive applications and websites with a exceptional user experience</h2>
@@ -233,7 +233,7 @@ class Home extends Component {
         <div className='experience'>
           <div className='textExperience'>
             <div className='textExperienceTitle'>
-              <p className='textExperienceTitleP'>Experience <p className='textExperienceUnderscore'> _</p></p>
+              <p className='textExperienceTitleP'>Experience<p className='textExperienceUnderscore'>_</p></p>
             </div>
             <div className='textExperienceSubtitle'>
               <p className='textExperienceSubtitleP'>
@@ -261,6 +261,7 @@ class Home extends Component {
           <div className='contact'>
             <div className='contactEmail'>
               <div className='contactEmailRectangle' id='contactEmailRectangle'
+                onClick={this.valueOnClick.bind(this, 'iconEmail')}
                 onMouseEnter={this.onMouseEnterHandlerEmail.bind(this, 'contactEmailRectangle', 'contactEmailP')}
                 onMouseLeave={this.onMouseLeaveHandlerEmail.bind(this, 'contactEmailRectangle', 'contactEmailP')}><p className='contactEmailP' id='contactEmailP'>Contact Me</p></div>
             </div>
@@ -272,7 +273,23 @@ class Home extends Component {
                 defaultZoom={11} />
             </div>
           </div>
-          <div className='footer' />
+          <div className='footer'>
+            <p className='footerName'>© 2019 Marcos Rodríguez Ordieres.</p>
+            <div id='iconsWorkFooter' className='iconsWorkFooter'>
+              <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
+                <FontAwesomeIcon icon={['fab', 'github']} size='2px' />
+              </div>
+              <div className='iconLinkedin' id='iconLinkedin' onClick={this.valueOnClick.bind(this, 'iconLinkedin')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconLinkedin')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconLinkedin')}>
+                <FontAwesomeIcon icon={['fab', 'linkedin']} size='2px' />
+              </div>
+              <div className='iconEmail' id='iconEmail' onClick={this.valueOnClick.bind(this, 'iconEmail')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconEmail')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconEmail')}>
+                <FontAwesomeIcon icon='envelope' size='2px' />
+              </div>
+              <div className='iconPlay' id='iconPlay' onClick={this.valueOnClick.bind(this, 'iconPlay')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlay')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlay')}>
+                <FontAwesomeIcon icon={['fab', 'google-play']} size='2px' />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

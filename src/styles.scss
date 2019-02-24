@@ -87,6 +87,7 @@ body {
   display: flex;
   flex: 0.2;
   background-color: #333333;
+  align-items: center;
 
 }
 
@@ -228,6 +229,12 @@ body {
   align-items: flex-end;
   flex-direction: flex-end;
   text-align: flex-end;
+  padding-top: 3%
+}
+
+.titleText p {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .subtitleText {
@@ -344,6 +351,11 @@ body {
   color: #ffc84c;
 }
 
+.textTitleUnderscore{
+  font-size: 1em;
+  color: black;
+}
+
 .textExperienceSubtitleP{
   font-size: 1.2em;
   align-items: center;
@@ -369,4 +381,21 @@ body {
   color: white;
   text-align: center;
   padding-top: 5%;
+}
+
+.footer p {
+  font-size: 1em;
+  padding-left: 5%;
+  font-family: 'Roboto Slab';
+  color: #bfbfbf;
+}
+
+.iconsWorkFooter {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+  width: '70%';
+  left: 90%;
+  position: absolute;
 }
