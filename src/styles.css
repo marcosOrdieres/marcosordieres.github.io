@@ -38,7 +38,9 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
 
 .experience {
   margin-top: 200vmin;
@@ -172,19 +174,19 @@ body {
 .firstCol {
   display: flex;
   flex-direction: column;
-  flex: 0.45;
+  flex: 0.25;
   text-align: center;
   justify-content: center; }
 
 .secondCol {
-  flex: 0.3;
+  flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: center; }
 
 .thirdCol {
-  flex: 0.3;
+  flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -194,12 +196,17 @@ body {
   flex: 0.5;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center; }
+  align-items: flex-end;
+  flex-direction: flex-end;
+  text-align: flex-end; }
 
 .subtitleText {
   flex: 0.5;
-  justify-content: center; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; }
 
 .backpackerProject {
   flex: 1;
@@ -246,9 +253,16 @@ body {
   justify-content: center;
   align-items: center; }
 
+.textExperienceTitle p {
+  display: inline-block;
+  vertical-align: top; }
+
 .textExperienceSubtitle {
   display: flex;
-  flex: 0.5; }
+  flex: 0.5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; }
 
 .photosExperienceFirst {
   display: flex;
@@ -264,6 +278,16 @@ body {
 
 .textExperienceTitleP {
   font-size: 3em;
+  align-items: center;
+  font-family: 'Roboto Slab';
+  color: white; }
+
+.textExperienceUnderscore {
+  font-size: 1em;
+  color: #ffc84c; }
+
+.textExperienceSubtitleP {
+  font-size: 1.2em;
   align-items: center;
   font-family: 'Roboto Slab';
   color: white; }

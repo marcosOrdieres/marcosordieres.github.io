@@ -43,6 +43,9 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .experience {
@@ -197,13 +200,13 @@ body {
 .firstCol{
   display: flex;
   flex-direction: column;
-  flex: 0.45;
+  flex: 0.25;
   text-align: center;
   justify-content: center;
 }
 
 .secondCol{
-  flex: 0.3;
+  flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -211,7 +214,7 @@ body {
 }
 
 .thirdCol{
-  flex: 0.3;
+  flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -222,13 +225,18 @@ body {
   flex: 0.5;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  align-items: flex-end;
+  flex-direction: flex-end;
+  text-align: flex-end;
 }
 
 .subtitleText {
   flex: 0.5;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .backpackerProject{
@@ -282,9 +290,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.textExperienceTitle p {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .textExperienceSubtitle {
   display: flex;
   flex: 0.5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .photosExperienceFirst {
@@ -307,6 +324,18 @@ body {
   color: white;
 }
 
+.textExperienceUnderscore{
+  font-size: 1em;
+  color: #ffc84c;
+}
+
+.textExperienceSubtitleP{
+  font-size: 1.2em;
+  align-items: center;
+  font-family: 'Roboto Slab';
+  color: white;
+}
+
 .contactEmailRectangle{
   width: 60%;
   height: 20%;
@@ -314,7 +343,6 @@ body {
   border-width: 3px;
   border-style: solid;
   border-color: white;
-
   text-align: center;
   align-items: center;
   justify-content: center;

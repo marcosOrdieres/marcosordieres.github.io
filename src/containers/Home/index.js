@@ -218,9 +218,13 @@ class Home extends Component {
         <div className='experience'>
           <div className='textExperience'>
             <div className='textExperienceTitle'>
-              <h2 className='textExperienceTitleP'>Experience</h2>
+              <p className='textExperienceTitleP'>Experience <p className='textExperienceUnderscore'> _</p></p>
             </div>
-            <div className='textExperienceSubtitle' />
+            <div className='textExperienceSubtitle'>
+              <p className='textExperienceSubtitleP'>
+                These Next ones are my experiences that I have in the field of informatics
+              </p>
+            </div>
           </div>
           <div className='photosExperience'>
             <div className='photosExperienceFirst' />
