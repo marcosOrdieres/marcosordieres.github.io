@@ -21,7 +21,6 @@ import iconPlayBomb from '../../public/images/iconPlayBomb.png';
 import iconPlayGhost from '../../public/images/iconPlayGhost.png';
 
 import GoogleMapReact from 'google-map-react';
-
 const words = ['Full Stack Developer', 'Front-End Developer', 'React Native Developer', 'GIS Specialist'];
 let i = 0;
 let timer;
@@ -92,6 +91,21 @@ class Home extends Component {
         break;
       case 'iconPlay':
         return window.open('https://play.google.com/store/apps/developer?id=marcosOrdieres', '_blank');
+        break;
+      case 'iconPlayShineGoogle':
+        return window.open('https://play.google.com/store/apps/details?id=com.shinepowered.shineselect', '_blank');
+        break;
+      case 'iconPlayShineApple':
+        return window.open('https://itunes.apple.com/de/app/shine-eco/id1359763626?mt=8', '_blank');
+        break;
+      case 'iconCap':
+        return window.open('https://www.capgemini.com/', '_blank');
+        break;
+      case 'iconPrometeo':
+        return window.open('http://www.prometeoinnovations.com/', '_blank');
+        break;
+      case 'imageTable':
+        return window.open('https://marcosordieres.github.io/TableJS/', '_blank');
         break;
       default:
         return window.open('https://www.linkedin.com/in/marcosrodriguezordieres/', '_blank');
@@ -178,7 +192,7 @@ class Home extends Component {
       <div className='d-inline-flex flex-xs-row p-2 col-example'>
         <div className='home'>
           <div id='name' className='name' onClick={this.valueOnClick.bind(this)} onMouseEnter={this.onMouseEnterHandler.bind(this, 'name')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'name')}>
-            <h2>Marcos Rodríguez Ordieres</h2>
+            <h4>Marcos Rodríguez Ordieres</h4>
           </div>
           <div id='iconsWork' className='iconsWork'>
             <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
@@ -229,7 +243,7 @@ class Home extends Component {
                   <h5>BACKPACKER NEEDS</h5>
                   <h6>Freelance React Native Project</h6>
                   <p>App for helping travellers to make their Backpack</p>
-                  <img src={iconPlayBackpacker} width='15%' height='15%' />
+                  <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBackpacker} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -240,7 +254,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'bombProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'bombProject')}>
               <div>
-                <img src={imageBomb} width='35%' height='70%' />
+                <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={imageBomb} width='35%' height='70%' />
               </div>
 
               {this.state.bombProject ?
@@ -248,7 +262,7 @@ class Home extends Component {
                   <h5>TIME BOMB</h5>
                   <h6>Freelance React Native Project</h6>
                   <p>App for helping travellers to make their Backpack</p>
-                  <img src={iconPlayBomb} width='15%' height='15%' />
+                  <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBomb} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -261,7 +275,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
               <div>
-                <img src={imageGhost} width='35%' height='70%' />
+                <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={imageGhost} width='35%' height='70%' />
               </div>
 
               {this.state.ghostProject ?
@@ -287,7 +301,7 @@ class Home extends Component {
                   <h5>TABLE GAME</h5>
                   <h6>Vanilla Javascript Project</h6>
                   <p>App for helping travellers to make their Backpack</p>
-                  <img src={imageTable} width='15%' height='15%' />
+                  <img onClick={this.valueOnClick.bind(this, 'imageTable')} src={imageTable} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -316,15 +330,21 @@ class Home extends Component {
                  :
                 <div className='squareJob'>
                   <p className='titleJob'>React Native Developer | Front-End Developer</p>
-                  <p className='subtitleJob'>2yr</p>
-                  <p className='subtitleJob'>ES6, NodeJS, ReactJS, React Native, Redux</p>
+                  <p className='subtitleJob'>2 years</p>
+                  <p className='subtitleJob'>React Native, Redux, ReactJS, NodeJS, ES6</p>
+
                   <div className='iconJob' id='iconJob'
                     onClick={this.valueOnClick.bind(this, 'iconJob')}
                     onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
                     onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <div className='iconsShine'>
+                      <div className='iconPlayShineGoogle' id='iconPlayShineGoogle' onClick={this.valueOnClick.bind(this, 'iconPlayShineGoogle')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlayShineGoogle')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlayShineGoogle')}>
+                        <FontAwesomeIcon icon={['fab', 'google-play']} size='3x' />
+                      </div>
+                      <div className='iconPlayShineApple' id='iconPlayShineApple' onClick={this.valueOnClick.bind(this, 'iconPlayShineApple')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlayShineApple')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlayShineApple')}>
+                        <FontAwesomeIcon icon={['fab', 'apple']} size='3x' />
+                      </div>
+                    </div>
                   </div>
                 </div>
                }
@@ -337,15 +357,15 @@ class Home extends Component {
                  :
                 <div className='squareJob'>
                   <p className='titleJob'>Full Stack Developer</p>
-                  <p className='subtitleJob'>8mon</p>
+                  <p className='subtitleJob'>8 months</p>
                   <p className='subtitleJob'>ES6, NodeJS, ReactJS, React Native, Redux</p>
                   <div className='iconJob' id='iconJob'
                     onClick={this.valueOnClick.bind(this, 'iconJob')}
                     onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
                     onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <div className='iconPlayShineApple' id='iconCap' onClick={this.valueOnClick.bind(this, 'iconCap')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconCap')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconCap')}>
+                      <FontAwesomeIcon icon={['fab', 'chrome']} size='3x' />
+                    </div>
                   </div>
                 </div>
                }
@@ -359,15 +379,15 @@ class Home extends Component {
                  :
                 <div className='squareJob'>
                   <p className='titleJob'>Javascript Developer and GIS Specialist</p>
-                  <p className='subtitleJob'>4mon</p>
+                  <p className='subtitleJob'>4 months</p>
                   <p className='subtitleJob'>Intership</p>
                   <div className='iconJob' id='iconJob'
                     onClick={this.valueOnClick.bind(this, 'iconJob')}
                     onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
                     onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
-                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <div className='iconPlayShineApple' id='iconPrometeo' onClick={this.valueOnClick.bind(this, 'iconPrometeo')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPrometeo')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPrometeo')}>
+                      <FontAwesomeIcon icon={['fab', 'chrome']} size='3x' />
+                    </div>
                   </div>
                 </div>
                }
