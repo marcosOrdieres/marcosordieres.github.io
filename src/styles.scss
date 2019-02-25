@@ -29,7 +29,7 @@ body {
   height: 100%;
   width: 100%;
   opacity: 1.3;
-  background-image: url(./public/images/imageBackgroundSmall.png);
+  background-image: url(./public/images/backgroundDeveloper.png);
   background-size:cover;
   opacity: 0.8;
 }
@@ -174,7 +174,7 @@ body {
 }
 
 .secondPartSubtitle{
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: 'Roboto Slab';
 }
 
@@ -353,7 +353,7 @@ body {
 
 .textTitleUnderscore{
   font-size: 1em;
-  color: black;
+  color: #ffc84c;
 }
 
 .textExperienceSubtitleP{
@@ -398,4 +398,28 @@ body {
   width: '70%';
   left: 90%;
   position: absolute;
+}
+
+.squareJob{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titleJob{
+  font-size: 1.3em;
+  font-family: 'Roboto Slab';
+  color: black;
+}
+
+.subtitleJob{
+  font-size: 1em;
+  font-family: 'Roboto Slab';
+  color: black;
+}
+
+.iconJob {
+  color: black;
+  opacity: 0.5
 }
