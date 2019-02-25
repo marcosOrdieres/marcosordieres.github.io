@@ -43,7 +43,6 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-
   display: flex;
   flex-direction: column;
 }
@@ -63,15 +62,16 @@ body {
 }
 
 .contactMe {
-  display: flex;
+  margin-top: 300vmin;
+  display: table-cell;
   position: absolute;
   vertical-align: middle;
-  flex-direction: column;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  margin-top: 300vmin;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact {
@@ -140,10 +140,23 @@ body {
 }
 
 .iconPlay{
-  padding-left:  5%;
-  padding-right:  5%;
   color: #f6f7f8;
   opacity: 0.5
+}
+
+.iconPlayShineApple{
+  color: black;
+  opacity: 0.5
+}
+
+.iconPlayShineGoogle{
+  color: black;
+  opacity: 0.5
+}
+
+.iconsShine{
+  display: flex;
+  flex-direction: row;
 }
 
 .iconsWork {
