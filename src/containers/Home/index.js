@@ -8,11 +8,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import imageBackpacker from '../../public/images/photoApp.png';
 import imageGhost from '../../public/images/ghost.png';
 import imageBomb from '../../public/images/bomb.png';
+import imageTable from '../../public/images/tableGame.png';
+
 import pokeImage from '../../public/images/pokeImage.png';
 
 import shineImage from '../../public/images/shine.png';
 import capgeminiImage from '../../public/images/capgemini.png';
 import prometeoImage from '../../public/images/prometeo.png';
+
+import iconPlayBackpacker from '../../public/images/iconPlayBackpacker.png';
+import iconPlayBomb from '../../public/images/iconPlayBomb.png';
+import iconPlayGhost from '../../public/images/iconPlayGhost.png';
 
 import GoogleMapReact from 'google-map-react';
 
@@ -45,10 +51,10 @@ class Home extends Component {
     		if (word.length > 0) {
     			document.getElementById('word').innerHTML += word.shift();
     		} else {
-    			this.deletingEffect(words, i, timer);
+      setTimeout(() => { this.deletingEffect(words, i, timer); }, 2000);
     			return false;
     		}
-    		timer = setTimeout(loopTyping, 200);
+    		timer = setTimeout(loopTyping, 110);
     	};
     	loopTyping();
   }
@@ -106,19 +112,35 @@ class Home extends Component {
     valueForLeaveHover.style.cursor = 'cursor';
   }
 
-  onMouseEnterHandlerProject (value) {
+  onMouseEnterHandlerProject (value, image) {
     const valueForHover = document.getElementById(value);
-    this.setState({hoverValueProject: true});
-    valueForHover.style.opacity = 0.5;
-    valueForHover.style.backgroundColor = '#8c8c8c';
-    valueForHover.style.cursor = 'pointer';
+    if (image === 'imageJobs') {
+      const valueImageForHover = document.getElementById('imageJobs');
+      this.setState({hoverValueProject: true, [value]: true});
+      valueForHover.style.opacity = 0.5;
+      valueForHover.style.cursor = 'pointer';
+    } else {
+      // valueForHover.style.opacity = 0.5;
+      valueForHover.style.backgroundColor = '#8c8c8c';
+      this.setState({hoverValueProject: true, [value]: true});
+      console.log(this.state);
+
+      valueForHover.style.cursor = 'pointer';
+    }
   }
 
-  onMouseLeaveHandlerProject (value) {
+  onMouseLeaveHandlerProject (value, image) {
     const valueForLeaveHover = document.getElementById(value);
-    this.setState({hoverValueProject: false});
-    valueForLeaveHover.style.opacity = 1;
-    valueForLeaveHover.style.backgroundColor = '#f6f7f8';
+    if (image === 'imageJobs') {
+      this.setState({hoverValueProject: false, [value]: false});
+      valueForLeaveHover.style.opacity = 1;
+      console.log(this.state);
+    } else {
+      this.setState({hoverValueProject: false, [value]: false});
+      console.log(this.state);
+      valueForLeaveHover.style.opacity = 1;
+      valueForLeaveHover.style.backgroundColor = '#f6f7f8';
+    }
   }
 
   onMouseEnterHandlerEmail (value, p) {
@@ -153,12 +175,11 @@ class Home extends Component {
     // const compareProducts = products.filter(product => product.compare);
 
     return (
-      <div>
+      <div className='d-inline-flex flex-xs-row p-2 col-example'>
         <div className='home'>
           <div id='name' className='name' onClick={this.valueOnClick.bind(this)} onMouseEnter={this.onMouseEnterHandler.bind(this, 'name')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'name')}>
-            <h2>Marcos Rodríguez</h2>
+            <h2>Marcos Rodríguez Ordieres</h2>
           </div>
-
           <div id='iconsWork' className='iconsWork'>
             <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
               <FontAwesomeIcon icon={['fab', 'github']} size='2x' />
@@ -194,7 +215,7 @@ class Home extends Component {
               <h2 className='secondPartSubtitle'>As a Software Developer based in Berlin, I am able to produce high quality responsive applications and websites with a exceptional user experience</h2>
             </div>
           </div>
-          <div className='secondCol'>
+          <div className='flex-xs-column flex-sm-column flex-md-row secondCol'>
             <div className='backpackerProject' id='backpackerProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'backpackerProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'backpackerProject')}>
@@ -202,6 +223,18 @@ class Home extends Component {
               <div>
                 <img src={imageBackpacker} width='35%' height='70%' />
               </div>
+
+              {this.state.backpackerProject ?
+                <div>
+                  <h5>BACKPACKER NEEDS</h5>
+                  <h6>Freelance React Native Project</h6>
+                  <p>App for helping travellers to make their Backpack</p>
+                  <img src={iconPlayBackpacker} width='15%' height='15%' />
+                </div>
+                :
+                null
+              }
+
             </div>
             <div className='bombProject' id='bombProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'bombProject')}
@@ -209,23 +242,56 @@ class Home extends Component {
               <div>
                 <img src={imageBomb} width='35%' height='70%' />
               </div>
+
+              {this.state.bombProject ?
+                <div>
+                  <h5>TIME BOMB</h5>
+                  <h6>Freelance React Native Project</h6>
+                  <p>App for helping travellers to make their Backpack</p>
+                  <img src={iconPlayBomb} width='15%' height='15%' />
+                </div>
+                :
+                null
+              }
             </div>
 
           </div>
-          <div className='thirdCol'>
+          <div className='flex-xs-column flex-sm-column flex-md-row thirdCol'>
             <div className='ghostProject' id='ghostProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
               <div>
                 <img src={imageGhost} width='35%' height='70%' />
               </div>
+
+              {this.state.ghostProject ?
+                <div>
+                  <h5>GHOST REPELLENT</h5>
+                  <h6>Freelance React Native Project</h6>
+                  <p>App for helping travellers to make their Backpack</p>
+                  <img src={iconPlayGhost} width='15%' height='15%' />
+                </div>
+                :
+                null
+              }
             </div>
             <div className='tableProject' id='tableProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'tableProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'tableProject')}>
               <div>
-                <img src={imageBackpacker} width='35%' height='70%' />
+                <img src={imageTable} width='35%' height='70%' />
               </div>
+
+              {this.state.tableProject ?
+                <div>
+                  <h5>TABLE GAME</h5>
+                  <h6>Vanilla Javascript Project</h6>
+                  <p>App for helping travellers to make their Backpack</p>
+                  <img src={imageTable} width='15%' height='15%' />
+                </div>
+                :
+                null
+              }
             </div>
           </div>
         </div>
@@ -241,24 +307,77 @@ class Home extends Component {
               </p>
             </div>
           </div>
-          <div className='photosExperience'>
-            <div className='photosExperienceFirst'>
-              <img className='imageJobs' src={shineImage} width='20%' height='40%' />
+          <div className='flex-xs-column flex-sm-column flex-md-row flex-lg-row photosExperience'>
+            <div className='photosExperienceFirst' id='photosExperienceFirst'
+              onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceFirst', 'imageJobs')}
+              onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceFirst', 'imageJobs')}>
+              {!this.state.photosExperienceFirst ?
+                <img className='imageJobs' id='imageJobs' src={shineImage} width='22%' height='40%' />
+                 :
+                <div className='squareJob'>
+                  <p className='titleJob'>React Native Developer | Front-End Developer</p>
+                  <p className='subtitleJob'>2yr</p>
+                  <p className='subtitleJob'>ES6, NodeJS, ReactJS, React Native, Redux</p>
+                  <div className='iconJob' id='iconJob'
+                    onClick={this.valueOnClick.bind(this, 'iconJob')}
+                    onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
+                    onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                  </div>
+                </div>
+               }
             </div>
-            <div className='photosExperienceSecond'>
-              <img className='imageJobs' src={capgeminiImage} width='80%' height='40%' />
+            <div className='photosExperienceSecond' id='photosExperienceSecond'
+              onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceSecond', 'imageJobs')}
+              onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceSecond', 'imageJobs')}>
+              {!this.state.photosExperienceSecond ?
+                <img className='imageJobs' id='imageJobs' src={capgeminiImage} width='80%' height='40%' />
+                 :
+                <div className='squareJob'>
+                  <p className='titleJob'>Full Stack Developer</p>
+                  <p className='subtitleJob'>8mon</p>
+                  <p className='subtitleJob'>ES6, NodeJS, ReactJS, React Native, Redux</p>
+                  <div className='iconJob' id='iconJob'
+                    onClick={this.valueOnClick.bind(this, 'iconJob')}
+                    onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
+                    onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                  </div>
+                </div>
+               }
+            </div>
+            <div className='photosExperienceThird' id='photosExperienceThird'
+              onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}
+              onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}>
+
+              {!this.state.photosExperienceThird ?
+                <img className='imageJobs' id='imageJobs' src={prometeoImage} width='50%' height='20%' />
+                 :
+                <div className='squareJob'>
+                  <p className='titleJob'>Javascript Developer and GIS Specialist</p>
+                  <p className='subtitleJob'>4mon</p>
+                  <p className='subtitleJob'>Intership</p>
+                  <div className='iconJob' id='iconJob'
+                    onClick={this.valueOnClick.bind(this, 'iconJob')}
+                    onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
+                    onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                    <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
+                  </div>
+                </div>
+               }
 
             </div>
-
-            <div className='photosExperienceThird'>
-              <img className='imageJobs' src={prometeoImage} width='50%' height='20%' />
-            </div>
-
           </div>
         </div>
 
         <div className='contactMe'>
-          <div className='contact'>
+          <div className='flex-xs-column flex-sm-column flex-md-column flex-lg-row contact'>
             <div className='contactEmail'>
               <div className='contactEmailRectangle' id='contactEmailRectangle'
                 onClick={this.valueOnClick.bind(this, 'iconEmail')}
