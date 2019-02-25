@@ -1,12 +1,16 @@
 {
-  "main.css": "static/css/main.c0ef878a.css",
-  "main.css.map": "static/css/main.c0ef878a.css.map",
-  "main.js": "static/js/main.330a88b2.js",
-  "main.js.map": "static/js/main.330a88b2.js.map",
+  "main.css": "static/css/main.aebf7909.css",
+  "main.css.map": "static/css/main.aebf7909.css.map",
+  "main.js": "static/js/main.394dbb06.js",
+  "main.js.map": "static/js/main.394dbb06.js.map",
   "static/media/RobotoSlab-Regular.ttf": "static/media/RobotoSlab-Regular.1ec06eed.ttf",
+  "static/media/backgroundDeveloper.png": "static/media/backgroundDeveloper.4e934472.png",
   "static/media/bomb.png": "static/media/bomb.db347e85.png",
   "static/media/capgemini.png": "static/media/capgemini.faab077a.png",
   "static/media/ghost.png": "static/media/ghost.1a08f670.png",
-  "static/media/imageBackgroundSmall.png": "static/media/imageBackgroundSmall.6833ce12.png",
-  "static/media/photoApp.png": "static/media/photoApp.0c19c9d3.png"
+  "static/media/iconPlayBackpacker.png": "static/media/iconPlayBackpacker.8872047b.png",
+  "static/media/iconPlayBomb.png": "static/media/iconPlayBomb.cb7a9560.png",
+  "static/media/iconPlayGhost.png": "static/media/iconPlayGhost.cdd22d6e.png",
+  "static/media/photoApp.png": "static/media/photoApp.0c19c9d3.png",
+  "static/media/tableGame.png": "static/media/tableGame.af64a364.png"
 }
