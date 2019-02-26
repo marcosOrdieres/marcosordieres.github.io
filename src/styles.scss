@@ -84,6 +84,8 @@ body, html {
   text-align: center;
   flex-direction: row;
   justify-content: center;
+
+  //align-items: center;
 }
 
 .footer {
@@ -199,11 +201,15 @@ body, html {
 .secondPartTitle {
   font-size: 3em;
   font-family: 'Roboto Slab';
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .secondPartSubtitle{
   font-size: 1.2em;
   font-family: 'Roboto Slab';
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #word {
@@ -390,17 +396,24 @@ body, html {
   align-items: center;
   font-family: 'Roboto Slab';
   color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.squareJob p{
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .contactEmailRectangle{
   width: 60%;
-  height: 20%;
+  height: 25%;
   border-radius: 5px;
   border-width: 3px;
   border-style: solid;
   border-color: white;
-  text-align: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -408,8 +421,6 @@ body, html {
   font-size: 3em;
   font-family: 'Roboto Slab';
   color: white;
-  text-align: center;
-  padding-top: 5%;
 }
 
 .footer p {
@@ -451,4 +462,12 @@ body, html {
 .iconJob {
   color: black;
   opacity: 0.5
+}
+@media screen and (max-width: 1204px){
+  .contactEmailP{
+    font-size: xx-large;
+  }
+  .middleText{
+    font-size: 4em;
+  }
 }

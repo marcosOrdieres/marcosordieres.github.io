@@ -36,7 +36,6 @@ class Home extends Component {
       hoverValueProject: false,
       hoverValueEmail: false
     };
-
   }
 
   componentWillMount () {
@@ -187,16 +186,16 @@ class Home extends Component {
   render () {
     // const {products, actions} = this.props;
     // const compareProducts = products.filter(product => product.compare);
-    const position = [52.560103, 13.414957]
+    const position = [52.560103, 13.414957];
     const iconPoke = new L.Icon({
-        iconUrl: require('../../public/images/poke.svg'),
-        iconAnchor: null,
-        popupAnchor: null,
-        shadowUrl: null,
-        shadowSize: null,
-        shadowAnchor: null,
-        iconSize: new L.Point(60, 75),
-        className: 'leaflet-div-icon'
+      iconUrl: require('../../public/images/poke.svg'),
+      iconAnchor: null,
+      popupAnchor: null,
+      shadowUrl: null,
+      shadowSize: null,
+      shadowAnchor: null,
+      iconSize: new L.Point(60, 75),
+      className: 'leaflet-div-icon'
     });
     return (
       <div>
@@ -237,8 +236,8 @@ class Home extends Component {
             </div>
             <div className='subtitleText'>
               <h2 className='secondPartSubtitle'>As a Software Developer based in Berlin, I am able to produce high quality responsive applications and websites with a exceptional user experience</h2>
-            <h2 className='secondPartSubtitle'>The Technology Stack used in my Projects are React Native, Redux, ReactJS, NodeJS, Firebase, Webpack, GeoJSON, GIS...</h2>
-          </div>
+              <h2 className='secondPartSubtitle'>The Technology Stack used in my Projects are React Native, Redux, ReactJS, NodeJS, Firebase, Webpack, GeoJSON, GIS...</h2>
+            </div>
           </div>
           <div className='flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row secondCol'>
             <div className='backpackerProject' id='backpackerProject'
@@ -272,7 +271,7 @@ class Home extends Component {
                 <div>
                   <h5>TIME BOMB GAME</h5>
                   <h6>React Native Project</h6>
-                <p>Small App of a Game in which you have to click the extra Bomb in the Left</p>
+                  <p>Small App of a Game in which you have to click the extra Bomb in the Left</p>
                   <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBomb} width='15%' height='15%' />
                 </div>
                 :
@@ -293,7 +292,7 @@ class Home extends Component {
                 <div>
                   <h5>GHOST REPELLENT</h5>
                   <h6>React Native Project</h6>
-                <p>App to work with Music and Sounds in a Project</p>
+                  <p>App to work with Music and Sounds in a Project</p>
                   <img src={iconPlayGhost} width='15%' height='15%' />
                 </div>
                 :
@@ -311,7 +310,7 @@ class Home extends Component {
                 <div>
                   <h5>TABLE GAME</h5>
                   <h6>Vanilla Javascript Project</h6>
-                <p>Small Game in order to use Array and Object operations in ES6</p>
+                  <p>Small Game in order to use Array and Object operations in ES6</p>
                   <img onClick={this.valueOnClick.bind(this, 'imageTable')} src={imageTable} width='15%' height='15%' />
                 </div>
                 :
@@ -336,8 +335,6 @@ class Home extends Component {
             <div className='photosExperienceFirst' id='photosExperienceFirst'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceFirst', 'imageJobs')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceFirst', 'imageJobs')}>
-
-
 
               {!this.state.photosExperienceFirst ?
                 <img className='imageJobs' id='imageJobs' src={prometeoImage} width='50%' height='20%' />
@@ -366,7 +363,7 @@ class Home extends Component {
                 <div className='squareJob'>
                   <p className='titleJob'>Full Stack Developer</p>
                   <p className='subtitleJob'>8 months</p>
-                <p className='subtitleJob'>Javascript, Java, ExtJS</p>
+                  <p className='subtitleJob'>Javascript, Java, ExtJS</p>
                   <div className='iconJob' id='iconJob'
                     onClick={this.valueOnClick.bind(this, 'iconJob')}
                     onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
@@ -381,7 +378,6 @@ class Home extends Component {
             <div className='photosExperienceThird' id='photosExperienceThird'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}>
-
 
               {!this.state.photosExperienceThird ?
                 <img className='imageJobs' id='imageJobs' src={shineImage} width='22%' height='40%' />
@@ -399,8 +395,7 @@ class Home extends Component {
                       <div className='iconPlayShineApple' id='iconPlayShineApple' onClick={this.valueOnClick.bind(this, 'iconPlayShineApple')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlayShineApple')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlayShineApple')}>
                         <FontAwesomeIcon icon={['fab', 'apple']} size='3x' />
                       </div>
-                      <div className='separator'>
-                      </div>
+                      <div className='separator' />
                       <div className='iconPlayShineGoogle' id='iconPlayShineGoogle' onClick={this.valueOnClick.bind(this, 'iconPlayShineGoogle')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlayShineGoogle')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlayShineGoogle')}>
                         <FontAwesomeIcon icon={['fab', 'google-play']} size='3x' />
                       </div>
@@ -423,13 +418,13 @@ class Home extends Component {
             <div className='contactPlace'>
               <Map center={position} zoom={13}>
                 <TileLayer
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"/>
+                  url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                  attribution='&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors' />
                 <Marker
-                    icon={iconPoke}
-                   position={position}>
+                  icon={iconPoke}
+                  position={position}>
                   <Popup>
-                    <span>A pretty CSS3 popup. <br/> Easily customizable.</span>
+                    <span>A pretty CSS3 popup. <br /> Easily customizable.</span>
                   </Popup>
                 </Marker>
               </Map>
