@@ -10,11 +10,13 @@
   font-weight: 30;
   src: url("./assets/fonts/RobotoSlab-Regular.ttf"); }
 
-body {
+body, html {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: sans-serif;
-  background: #f6f7f8;
+  background: white;
   color: #393c45; }
 
 .home {
@@ -31,7 +33,7 @@ body {
   opacity: 0.8; }
 
 .secondPart {
-  margin-top: 100vmin;
+  margin-top: 100vh;
   display: table-cell;
   position: absolute;
   vertical-align: middle;
@@ -43,7 +45,7 @@ body {
   flex-direction: column; }
 
 .experience {
-  margin-top: 200vmin;
+  margin-top: 200vh;
   display: table-cell;
   position: absolute;
   vertical-align: middle;
@@ -56,7 +58,7 @@ body {
   flex-direction: column; }
 
 .contactMe {
-  margin-top: 300vmin;
+  margin-top: 300vh;
   display: table-cell;
   position: absolute;
   vertical-align: middle;
@@ -93,6 +95,17 @@ body {
   display: flex;
   flex: 0.5;
   background-color: white; }
+
+.leaflet-container {
+  width: 100%;
+  height: 100%; }
+
+.leaflet-div-icon {
+  background: transparent;
+  border: 1px solid transparent; }
+
+.separator {
+  width: 30px; }
 
 .name {
   padding-top: 1%;
@@ -177,7 +190,7 @@ body {
   margin-right: auto;
   padding-top: 10%;
   vertical-align: middle;
-  width: 500px;
+  max-width: 500px;
   line-height: 90px; }
 
 .nameTitle {
