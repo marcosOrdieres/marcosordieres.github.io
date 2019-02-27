@@ -115,6 +115,7 @@ class Home extends Component {
   }
 
   onMouseEnterHandler (value) {
+    console.log(value);
     const valueForHover = document.getElementById(value);
     this.setState({hoverValue: true});
     valueForHover.style.opacity = 1;
@@ -152,7 +153,7 @@ class Home extends Component {
       this.setState({hoverValueProject: false, [value]: false});
       console.log(this.state);
       valueForLeaveHover.style.opacity = 1;
-      valueForLeaveHover.style.backgroundColor = '#f6f7f8';
+      valueForLeaveHover.style.backgroundColor = 'white';
     }
   }
 
@@ -200,23 +201,27 @@ class Home extends Component {
     return (
       <div>
         <div className='home'>
-          <div id='name' className='name' onClick={this.valueOnClick.bind(this)} onMouseEnter={this.onMouseEnterHandler.bind(this, 'name')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'name')}>
-            <h4>Marcos Rodríguez Ordieres</h4>
+
+          <div id='name' className='flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row name' onClick={this.valueOnClick.bind(this)} onMouseEnter={this.onMouseEnterHandler.bind(this, 'name')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'name')}>
+            <div className='nameInside'>
+                <h4>Marcos Rodríguez Ordieres</h4>
+            </div>
+            <div id='iconsWork' className='iconsWork'>
+              <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
+                <FontAwesomeIcon icon={['fab', 'github']} size='5x' />
+              </div>
+              <div className='iconLinkedin' id='iconLinkedin' onClick={this.valueOnClick.bind(this, 'iconLinkedin')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconLinkedin')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconLinkedin')}>
+                <FontAwesomeIcon icon={['fab', 'linkedin']} size='5x' />
+              </div>
+              <div className='iconEmail' id='iconEmail' onClick={this.valueOnClick.bind(this, 'iconEmail')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconEmail')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconEmail')}>
+                <FontAwesomeIcon icon='envelope' size='5x' />
+              </div>
+              <div className='iconPlay' id='iconPlay' onClick={this.valueOnClick.bind(this, 'iconPlay')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlay')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlay')}>
+                <FontAwesomeIcon icon={['fab', 'google-play']} size='5x' />
+              </div>
+            </div>
           </div>
-          <div id='iconsWork' className='iconsWork'>
-            <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
-              <FontAwesomeIcon icon={['fab', 'github']} size='2x' />
-            </div>
-            <div className='iconLinkedin' id='iconLinkedin' onClick={this.valueOnClick.bind(this, 'iconLinkedin')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconLinkedin')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconLinkedin')}>
-              <FontAwesomeIcon icon={['fab', 'linkedin']} size='2x' />
-            </div>
-            <div className='iconEmail' id='iconEmail' onClick={this.valueOnClick.bind(this, 'iconEmail')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconEmail')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconEmail')}>
-              <FontAwesomeIcon icon='envelope' size='2x' />
-            </div>
-            <div className='iconPlay' id='iconPlay' onClick={this.valueOnClick.bind(this, 'iconPlay')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlay')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlay')}>
-              <FontAwesomeIcon icon={['fab', 'google-play']} size='2x' />
-            </div>
-          </div>
+
           <div className='rowText'>
             <div className='col-12'>
               <h2 className='middleText'>Hello, I am <strong><p className='nameTitle'>Marcos.</p></strong> And this is my <i>Portfolio</i></h2>
@@ -239,7 +244,7 @@ class Home extends Component {
               <h2 className='secondPartSubtitle'>The Technology Stack used in my Projects are React Native, Redux, ReactJS, NodeJS, Firebase, Webpack, GeoJSON, GIS...</h2>
             </div>
           </div>
-          <div className='flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row secondCol'>
+          <div className='flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row secondCol'>
             <div className='backpackerProject' id='backpackerProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'backpackerProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'backpackerProject')}>
@@ -280,7 +285,7 @@ class Home extends Component {
             </div>
 
           </div>
-          <div className='flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row  thirdCol'>
+          <div className='flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row  thirdCol'>
             <div className='ghostProject' id='ghostProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
@@ -337,7 +342,7 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceFirst', 'imageJobs')}>
 
               {!this.state.photosExperienceFirst ?
-                <img className='imageJobs' id='imageJobs' src={prometeoImage} width='50%' height='20%' />
+                <img className='imageJobsPrometeo' id='imageJobs' src={prometeoImage} />
                  :
                 <div className='squareJob'>
                   <p className='titleJob'>Javascript Developer and GIS Specialist</p>
@@ -358,7 +363,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceSecond', 'imageJobs')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceSecond', 'imageJobs')}>
               {!this.state.photosExperienceSecond ?
-                <img className='imageJobs' id='imageJobs' src={capgeminiImage} width='80%' height='40%' />
+                <img className='imageJobsCap' id='imageJobs' src={capgeminiImage}  />
                  :
                 <div className='squareJob'>
                   <p className='titleJob'>Full Stack Developer</p>
@@ -380,7 +385,7 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}>
 
               {!this.state.photosExperienceThird ?
-                <img className='imageJobs' id='imageJobs' src={shineImage} width='22%' height='40%' />
+                <img className='imageJobsShine' id='imageJobs' src={shineImage}/>
                  :
                 <div className='squareJob'>
                   <p className='titleJob'>React Native Developer | Front-End Developer</p>
@@ -431,19 +436,21 @@ class Home extends Component {
             </div>
           </div>
           <div className='footer'>
-            <p className='footerName'>© 2019 Marcos Rodríguez Ordieres.</p>
+            <div className='footerNameInside'>
+              <p className='footerName'>© 2019 Marcos Rodríguez Ordieres.</p>
+            </div>
             <div id='iconsWorkFooter' className='iconsWorkFooter'>
               <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
-                <FontAwesomeIcon icon={['fab', 'github']} size='2px' />
+                <FontAwesomeIcon icon={['fab', 'github']}/>
               </div>
               <div className='iconLinkedin' id='iconLinkedin' onClick={this.valueOnClick.bind(this, 'iconLinkedin')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconLinkedin')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconLinkedin')}>
-                <FontAwesomeIcon icon={['fab', 'linkedin']} size='2px' />
+                <FontAwesomeIcon icon={['fab', 'linkedin']} size='5px' />
               </div>
               <div className='iconEmail' id='iconEmail' onClick={this.valueOnClick.bind(this, 'iconEmail')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconEmail')}onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconEmail')}>
-                <FontAwesomeIcon icon='envelope' size='2px' />
+                <FontAwesomeIcon icon='envelope' size='5px' />
               </div>
               <div className='iconPlay' id='iconPlay' onClick={this.valueOnClick.bind(this, 'iconPlay')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlay')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlay')}>
-                <FontAwesomeIcon icon={['fab', 'google-play']} size='2px' />
+                <FontAwesomeIcon icon={['fab', 'google-play']} size='5px' />
               </div>
             </div>
           </div>

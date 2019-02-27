@@ -31,7 +31,8 @@ body, html {
   background-image: url(./public/images/backgroundDeveloper.png);
   background-size: cover;
   opacity: 0.8;
-  flex-basis: 100%; }
+  display: flex;
+  flex-direction: column; }
 
 .secondPart {
   margin-top: 100vh;
@@ -81,6 +82,7 @@ body, html {
 .footer {
   display: flex;
   flex: 0.2;
+  flex-direction: row;
   background-color: #333333;
   align-items: center; }
 
@@ -110,33 +112,45 @@ body, html {
 
 .name {
   padding-top: 1%;
-  left: 1%;
-  font-family: 'Roboto Slab Slim';
+  padding-left: 2%;
+  font-family: 'Roboto Slab';
   color: #f6f7f8;
   font-weight: 5;
   font-size: 0.5em;
-  position: absolute;
+  opacity: 0.5;
+  display: flex;
+  flex: 0.1;
+  flex-direction: row;
   opacity: 0.5; }
 
 .iconGithub {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
   color: #f6f7f8;
   opacity: 0.5; }
 
 .iconLinkedin {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
   color: #f6f7f8;
   opacity: 0.5; }
 
 .iconEmail {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
   color: #f6f7f8;
   opacity: 0.5; }
 
 .iconPlay {
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #f6f7f8;
+  opacity: 0.5; }
+
+.iconGithubFooter {
+  padding-left: 2%;
+  padding-right: 2%;
+  size: 5px;
   color: #f6f7f8;
   opacity: 0.5; }
 
@@ -153,14 +167,18 @@ body, html {
   flex-direction: row; }
 
 .iconsWork {
-  padding-top: 1%;
   display: flex;
   flex-direction: row;
-  flex-basis: 100%;
-  flex: 1;
-  width: '60%';
-  left: 80%;
-  position: absolute; }
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+  align-items: center;
+  flex: 0.5; }
+
+.nameInside {
+  padding-top: 1%;
+  display: flex;
+  flex: 0.5; }
 
 .iconOnly {
   padding: 10px 10px 10px 10px; }
@@ -196,7 +214,8 @@ body, html {
   padding-top: 10%;
   vertical-align: middle;
   max-width: 500px;
-  line-height: 90px; }
+  line-height: 90px;
+  flex: 0.9; }
 
 .nameTitle {
   color: #ffc84c; }
@@ -320,8 +339,20 @@ body, html {
   justify-content: center;
   background-color: white; }
 
-.imageJobs {
-  opacity: 0.5; }
+.imageJobsPrometeo {
+  opacity: 0.5;
+  width: 50%;
+  height: 20%; }
+
+.imageJobsCap {
+  opacity: 0.5;
+  width: 70%;
+  height: 40%; }
+
+.imageJobsShine {
+  opacity: 0.5;
+  width: 22%;
+  height: 40%; }
 
 .textExperienceTitleP {
   font-size: 3em;
@@ -373,12 +404,15 @@ body, html {
 
 .iconsWorkFooter {
   display: flex;
+  flex: 0.5;
   flex-direction: row;
-  flex-basis: 100%;
-  flex: 1;
-  width: '70%';
-  left: 90%;
-  position: absolute; }
+  padding-bottom: 2%;
+  padding-right: 2%;
+  justify-content: flex-end; }
+
+.footerNameInside {
+  display: flex;
+  flex: 0.5; }
 
 .squareJob {
   display: flex;
@@ -400,8 +434,44 @@ body, html {
   color: black;
   opacity: 0.5; }
 
+@media screen and (max-width: 1444px) {
+  .secondPartSubtitle {
+    font-size: 0.7em; } }
+
 @media screen and (max-width: 1204px) {
   .contactEmailP {
     font-size: xx-large; }
+  .secondPartSubtitle {
+    font-size: 1em; }
   .middleText {
-    font-size: 4em; } }
+    font-size: 4em; }
+  .name {
+    font-size: 0.2em; }
+  .imageJobsPrometeo {
+    width: 30%;
+    height: 20%; }
+  .imageJobsCap {
+    width: 40%;
+    height: 40%; }
+  .imageJobsShine {
+    width: 15%;
+    height: 60%; } }
+
+@media screen and (max-width: 600px) {
+  .contactEmailP {
+    font-size: xx-large; }
+  .secondPartSubtitle {
+    font-size: 0.8em; }
+  .middleText {
+    font-size: 4em; }
+  .name {
+    font-size: 0.2em; }
+  .imageJobsPrometeo {
+    width: 30%;
+    height: 20%; }
+  .imageJobsCap {
+    width: 40%;
+    height: 40%; }
+  .imageJobsShine {
+    width: 15%;
+    height: 60%; } }
