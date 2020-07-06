@@ -34,7 +34,7 @@ body, html {
   display: flex;
   flex-direction: column; }
 
-.secondPart {
+.secondPartText {
   margin-top: 100vh;
   display: table-cell;
   position: absolute;
@@ -46,7 +46,7 @@ body, html {
   display: flex;
   flex-direction: column; }
 
-.experience {
+.secondPartProjects {
   margin-top: 200vh;
   display: table-cell;
   position: absolute;
@@ -55,12 +55,24 @@ body, html {
   left: 0;
   height: 100%;
   width: 100%;
+  display: flex;
   background-color: #595959;
+  flex-direction: column; }
+
+.experience {
+  margin-top: 300vh;
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column; }
 
 .contactMe {
-  margin-top: 300vh;
+  margin-top: 400vh;
   display: table-cell;
   position: absolute;
   vertical-align: middle;
@@ -195,8 +207,24 @@ body, html {
   padding-left: 5%;
   padding-right: 5%; }
 
+.thirdPartTitle {
+  font-size: 3em;
+  font-family: 'Roboto Slab';
+  color: white;
+  padding-left: 5%;
+  padding-right: 5%; }
+
+.colorWhite {
+  color: white; }
+
 .secondPartSubtitle {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  font-family: 'Roboto Slab';
+  padding-left: 5%;
+  padding-right: 5%; }
+
+.secondPartSubtitleSkills {
+  font-size: 1.8em;
   font-family: 'Roboto Slab';
   padding-left: 5%;
   padding-right: 5%; }
@@ -242,7 +270,7 @@ body, html {
   justify-content: center; }
 
 .titleText {
-  flex: 0.5;
+  flex: 0.2;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -255,12 +283,53 @@ body, html {
   vertical-align: top; }
 
 .subtitleText {
-  flex: 0.5;
+  flex: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column; }
+
+.whoIsMarcosText {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #595959;
+  flex-direction: column; }
+
+.whoIsMarcosTextMiddle {
+  flex: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.whoIsMarcosTextDown {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 2px solid #595959;
+  flex-direction: column; }
+
+.whoIsMarcosTextHalfRight {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 2px solid #595959; }
+
+.whoIsMarcosTextHalf {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
 .backpackerProject {
   flex: 1;
@@ -339,26 +408,27 @@ body, html {
   justify-content: center;
   background-color: white; }
 
+.photosExperienceFourth {
+  display: flex;
+  flex: 0.333;
+  align-items: center;
+  justify-content: center;
+  background-color: white; }
+
 .imageJobsPrometeo {
-  opacity: 0.5;
   width: 50%;
+  padding-bottom: 30px;
   height: 20%; }
 
 .imageJobsCap {
-  opacity: 0.5;
   width: 70%;
-  height: 40%; }
-
-.imageJobsShine {
-  opacity: 0.5;
-  width: 22%;
   height: 40%; }
 
 .textExperienceTitleP {
   font-size: 3em;
   align-items: center;
   font-family: 'Roboto Slab';
-  color: white; }
+  color: #595959; }
 
 .textExperienceUnderscore {
   font-size: 1em;
@@ -369,10 +439,10 @@ body, html {
   color: #ffc84c; }
 
 .textExperienceSubtitleP {
-  font-size: 1.2em;
+  font-size: 1.8em;
   align-items: center;
   font-family: 'Roboto Slab';
-  color: white;
+  color: #595959;
   padding-left: 5%;
   padding-right: 5%; }
 
