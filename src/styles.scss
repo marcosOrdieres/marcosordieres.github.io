@@ -210,12 +210,12 @@ body, html {
 .thirdPartTitle {
   font-size: 3em;
   font-family: 'Roboto Slab';
-  color:white;
+  color: white;
   padding-left: 5%;
   padding-right: 5%; }
 
-  .colorWhite {
-    color:white; }
+.colorWhite {
+  color: white; }
 
 .secondPartSubtitle {
   font-size: 1.4em;
@@ -223,11 +223,28 @@ body, html {
   padding-left: 5%;
   padding-right: 5%; }
 
-  .secondPartSubtitleSkills {
-    font-size: 1.8em;
+  .secondPartSubtitleGithub {
+    font-size: 1.5em;
     font-family: 'Roboto Slab';
-    padding-left: 5%;
-    padding-right: 5%; }
+    text-decoration: underline;
+    }
+
+    .secondPartSubtitleGithub:hover {
+      font-size: 1.6em;
+      opacity:0.5;
+      cursor: pointer;
+      }
+
+  .secondPartSubtitleBold {
+    font-size: 1.5em;
+    font-family: 'Roboto Slab';
+    font-weight: 400;}
+
+.secondPartSubtitleSkills {
+  font-size: 1.8em;
+  font-family: 'Roboto Slab';
+  padding-left: 5%;
+  padding-right: 5%; }
 
 #word {
   font-family: 'Roboto Slab Slim';
@@ -290,21 +307,19 @@ body, html {
   text-align: center;
   flex-direction: column; }
 
-  .whoIsMarcosText {
-    flex: 0.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: 2px solid #595959;
-
-    flex-direction: column; }
+.whoIsMarcosText {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #595959;
+  flex-direction: column; }
 
 .whoIsMarcosTextMiddle {
   flex: 0.5;
   display: flex;
   flex-direction: row;
-
   justify-content: center;
   align-items: center;
   text-align: center; }
@@ -316,7 +331,6 @@ body, html {
   align-items: center;
   text-align: center;
   border-top: 2px solid #595959;
-
   flex-direction: column; }
 
 .whoIsMarcosTextHalfRight {
@@ -325,19 +339,15 @@ body, html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-right: 2px solid #595959;
+  border-right: 2px solid #595959; }
 
-}
+.whoIsMarcosTextHalf {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
-  .whoIsMarcosTextHalf {
-    flex: 0.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-  }
-      
 .backpackerProject {
   flex: 1;
   display: flex;
@@ -415,16 +425,16 @@ body, html {
   justify-content: center;
   background-color: white; }
 
-  .photosExperienceFourth {
-    display: flex;
-    flex: 0.333;
-    align-items: center;
-    justify-content: center;
-    background-color: white; }
+.photosExperienceFourth {
+  display: flex;
+  flex: 0.333;
+  align-items: center;
+  justify-content: center;
+  background-color: white; }
 
 .imageJobsPrometeo {
   width: 50%;
-  padding-bottom:30px;
+  padding-bottom: 30px;
   height: 20%; }
 
 .imageJobsCap {
@@ -532,8 +542,7 @@ body, html {
     height: 40%; }
   .imageJobsShine {
     width: 15%;
-    height: 60%; } 
-  }
+    height: 60%; } }
 
 @media screen and (max-width: 600px) {
   .contactEmailP {

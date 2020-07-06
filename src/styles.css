@@ -223,6 +223,23 @@ body, html {
   padding-left: 5%;
   padding-right: 5%; }
 
+  .secondPartSubtitleGithub {
+    font-size: 1.5em;
+    font-family: 'Roboto Slab';
+    text-decoration: underline;
+    }
+
+    .secondPartSubtitleGithub:hover {
+      font-size: 1.6em;
+      opacity:0.5;
+      cursor: pointer;
+      }
+
+  .secondPartSubtitleBold {
+    font-size: 1.5em;
+    font-family: 'Roboto Slab';
+    font-weight: 400;}
+
 .secondPartSubtitleSkills {
   font-size: 1.8em;
   font-family: 'Roboto Slab';
@@ -448,8 +465,7 @@ body, html {
 
 .squareJob p {
   padding-left: 5%;
-  padding-right: 5%; 
-}
+  padding-right: 5%; }
 
 .contactEmailRectangle {
   width: 60%;
