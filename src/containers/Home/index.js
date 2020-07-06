@@ -355,7 +355,7 @@ class Home extends Component {
             </div>
             <div className='textExperienceSubtitle'>
               <p className='textExperienceSubtitleP'>
-                The next are the Companies in which I was working in the field of Information Technology as Software Engineer. Currently working in KickID, an IT sports Company.
+                The next are the Companies in which I was working in the field of Information Technology as Software Engineer. Currently working in KickID.com, an IT sports Company.
               </p>
             </div>
           </div>
