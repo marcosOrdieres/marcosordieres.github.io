@@ -6,7 +6,7 @@ import * as productActions from '../../actions/product';
 import {connect} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import imageBackpacker from '../../public/images/photoApp.png';
-import imageGhost from '../../public/images/ghost.png';
+import clock from '../../public/images/clock.png';
 import imageBomb from '../../public/images/bomb.png';
 import imageTable from '../../public/images/tableGame.png';
 
@@ -16,14 +16,14 @@ import shineImage from '../../public/images/shine.png';
 import capgeminiImage from '../../public/images/capgemini.png';
 import prometeoImage from '../../public/images/prometeo.png';
 
+import kickid from '../../public/images/kickid.jpeg';
+
+
 import iconPlayBackpacker from '../../public/images/iconPlayBackpacker.png';
 import iconPlayBomb from '../../public/images/iconPlayBomb.png';
-import iconPlayGhost from '../../public/images/iconPlayGhost.png';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
-
-import GoogleMapReact from 'google-map-react';
-const words = ['Full Stack Developer', 'Front-End Developer', 'React Native Developer', 'GIS Specialist'];
+const words = ['Full Stack Developer', 'Front-End Developer', 'React Developer', 'React Native Developer'];
 let i = 0;
 let timer;
 
@@ -84,33 +84,26 @@ class Home extends Component {
     switch (value) {
       case 'iconGithub':
         return window.open('https://github.com/marcosOrdieres', '_blank');
-        break;
       case 'iconLinkedin':
         return window.open('https://www.linkedin.com/in/marcosrodriguezordieres/', '_blank');
-        break;
       case 'iconEmail':
         return window.location.href = 'mailto:marcosordieres89@gmail.com';
-        break;
       case 'iconPlay':
         return window.open('https://play.google.com/store/apps/developer?id=marcosOrdieres', '_blank');
-        break;
       case 'iconPlayShineGoogle':
         return window.open('https://play.google.com/store/apps/details?id=com.shinepowered.shineselect', '_blank');
-        break;
       case 'iconPlayShineApple':
         return window.open('https://itunes.apple.com/de/app/shine-eco/id1359763626?mt=8', '_blank');
-        break;
+      case 'iconPlayKickidWeb':
+        return window.open('https://www.kickid.com', '_blank');
+      case 'iconPlayKickidAndroid':
+        return window.open('https://play.google.com/store/apps/details?id=com.idleague.kickid&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1', '_blank');
       case 'iconCap':
         return window.open('https://www.capgemini.com/', '_blank');
-        break;
       case 'iconPrometeo':
         return window.open('http://www.prometeoinnovations.com/', '_blank');
-        break;
       case 'imageTable':
         return window.open('https://marcosordieres.github.io/TableJS/', '_blank');
-        break;
-      default:
-        return window.open('https://www.linkedin.com/in/marcosrodriguezordieres/', '_blank');
     }
   }
 
@@ -137,7 +130,7 @@ class Home extends Component {
       valueForHover.style.opacity = 0.5;
       valueForHover.style.cursor = 'pointer';
     } else {
-      valueForHover.style.backgroundColor = '#f6f7f8';
+      valueForHover.style.backgroundColor = '#9b9b9b';
       this.setState({hoverValueProject: true, [value]: true});
       valueForHover.style.cursor = 'pointer';
     }
@@ -153,7 +146,7 @@ class Home extends Component {
       this.setState({hoverValueProject: false, [value]: false});
       console.log(this.state);
       valueForLeaveHover.style.opacity = 1;
-      valueForLeaveHover.style.backgroundColor = 'white';
+      valueForLeaveHover.style.backgroundColor = '#595959';
     }
   }
 
@@ -234,18 +227,48 @@ class Home extends Component {
             <Compare products={compareProducts}/>
           } */}
         </div>
-        <div className='secondPart'>
-          <div className='firstCol'>
+        <div className='secondPartText'>
+
             <div className='titleText'>
-              <p className='secondPartTitle'>Work<p className='textTitleUnderscore'>_</p></p>
+              <p className='secondPartTitle'>But, Who is Marcos<p className='textTitleUnderscore'>?_</p></p>
             </div>
             <div className='subtitleText'>
-              <h2 className='secondPartSubtitle'>As a Software Developer based in Berlin, I am able to produce high quality responsive applications and websites with a exceptional user experience</h2>
-              <h2 className='secondPartSubtitle'>The Technology Stack used in my Projects are React Native, Redux, ReactJS, NodeJS, Firebase, Webpack, GeoJSON, GIS...</h2>
+
+              <div className='whoIsMarcosText'>
+                <h2 className='secondPartSubtitle'>As a Software Developer based in Berlin, I am able to produce high quality responsive applications and websites with a exceptional user experience.</h2>
+              </div>
+
+              <div className='whoIsMarcosTextMiddle'>
+              <div className='whoIsMarcosTextHalfRight'>
+
+                <h2 className='secondPartSubtitleSkills'>It is a pleasure for me coding Javascript with React and React Native (with Hooks), super styled Components, flavored with GraphQL, React Testing Library and Jest.</h2>
+                </div>
+                <div className='whoIsMarcosTextHalf'>
+
+                <h2 className='secondPartSubtitleSkills'>I also enjoy using NodeJS, Typescript, Firebase and any kind of automation.</h2>
+                </div>
+
+              </div>
+              <div className='whoIsMarcosTextDown'>
+
+                <h2 className='secondPartSubtitle'>In addition to Travel and Surf, I have built some side Projects (some of them are the next) and Packages which you can find in my GitHub.</h2>
+              </div>
+
+            
+            
+            
+            
             </div>
           </div>
+
+
+
+          <div className='secondPartProjects'>
+          <div className='titleText'>
+              <p className='thirdPartTitle'>Hover and Click into my Personal Projects<p className='textTitleUnderscore'>_</p></p>
+            </div>
           <div className='flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row secondCol'>
-            <div className='backpackerProject' id='backpackerProject'
+            <div onClick={()=> window.open("https://github.com/marcosOrdieres/backpacker-needs", "_blank")} className='backpackerProject' id='backpackerProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'backpackerProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'backpackerProject')}>
               {/* {this.state.isPhone ? <div className="rectangleBackpackerProject"></div> : <div className="rectangleBackpackerProject"></div>} */}
@@ -255,9 +278,9 @@ class Home extends Component {
 
               {this.state.backpackerProject ?
                 <div>
-                  <h5>BACKPACKER NEEDS</h5>
-                  <h6>React Native Project</h6>
-                  <p>App for helping travellers to make their Backpack</p>
+                  <h5 className='colorWhite'>BACKPACKER NEEDS</h5>
+                  <h6 className='colorWhite'>React Native Project</h6>
+                  <p className='colorWhite'>App for helping travellers to make their Backpack</p>
                   <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBackpacker} width='15%' height='15%' />
                 </div>
                 :
@@ -265,7 +288,7 @@ class Home extends Component {
               }
 
             </div>
-            <div className='bombProject' id='bombProject'
+            <div onClick={()=> window.open("https://github.com/marcosOrdieres/feetFat", "_blank")} className='bombProject' id='bombProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'bombProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'bombProject')}>
               <div>
@@ -274,9 +297,9 @@ class Home extends Component {
 
               {this.state.bombProject ?
                 <div>
-                  <h5>TIME BOMB GAME</h5>
-                  <h6>React Native Project</h6>
-                  <p>Small App of a Game in which you have to click the extra Bomb in the Left</p>
+                  <h5 className='colorWhite'>Fat Foot Challenge</h5>
+                  <h6 className='colorWhite'>React Native Project</h6>
+                  <p className='colorWhite'>Game made in React Native (with Hooks) and Typescript</p>
                   <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBomb} width='15%' height='15%' />
                 </div>
                 :
@@ -286,25 +309,25 @@ class Home extends Component {
 
           </div>
           <div className='flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row  thirdCol'>
-            <div className='ghostProject' id='ghostProject'
+            <div onClick={()=> window.open("https://github.com/marcosOrdieres/time-converter", "_blank")} className='ghostProject' id='ghostProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
               <div>
-                <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={imageGhost} width='35%' height='70%' />
+                <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={clock} width='35%' height='70%' />
               </div>
 
               {this.state.ghostProject ?
                 <div>
-                  <h5>GHOST REPELLENT</h5>
-                  <h6>React Native Project</h6>
-                  <p>App to work with Music and Sounds in a Project</p>
-                  <img src={iconPlayGhost} width='15%' height='15%' />
+                  <h5 className='colorWhite'>Time Converter</h5>
+                  <h6 className='colorWhite'>npm package made with Javascript</h6>
+                  <p className='colorWhite'>Small Project using TDD and Jest</p>
+                  <img src={clock} width='15%' height='15%' />
                 </div>
                 :
                 null
               }
             </div>
-            <div className='tableProject' id='tableProject'
+            <div onClick={()=> window.open("https://github.com/marcosOrdieres/Table-js", "_blank")} className='tableProject' id='tableProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'tableProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'tableProject')}>
               <div>
@@ -313,9 +336,9 @@ class Home extends Component {
 
               {this.state.tableProject ?
                 <div>
-                  <h5>TABLE GAME</h5>
-                  <h6>Vanilla Javascript Project</h6>
-                  <p>Small Game in order to use Array and Object operations in ES6</p>
+                  <h5 className='colorWhite'>TABLE GAME</h5>
+                  <h6 className='colorWhite'>Vanilla Javascript Project</h6>
+                  <p className='colorWhite'>Small Game in order to use Array and Object operations in ES6</p>
                   <img onClick={this.valueOnClick.bind(this, 'imageTable')} src={imageTable} width='15%' height='15%' />
                 </div>
                 :
@@ -332,10 +355,12 @@ class Home extends Component {
             </div>
             <div className='textExperienceSubtitle'>
               <p className='textExperienceSubtitleP'>
-                The next are the Companies in which I was working in the field of Information Technology
+                The next are the Companies in which I was working in the field of Information Technology as Software Engineer. Currently working in KickID, an IT sports Company.
               </p>
             </div>
           </div>
+
+
           <div className='flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row photosExperience'>
             <div className='photosExperienceFirst' id='photosExperienceFirst'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceFirst', 'imageJobs')}
@@ -380,6 +405,9 @@ class Home extends Component {
                 </div>
                }
             </div>
+
+
+
             <div className='photosExperienceThird' id='photosExperienceThird'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}>
@@ -388,9 +416,9 @@ class Home extends Component {
                 <img className='imageJobsShine' id='imageJobs' src={shineImage}/>
                  :
                 <div className='squareJob'>
-                  <p className='titleJob'>React Native Developer | Front-End Developer</p>
+                  <p className='titleJob'>Full-Stack Developer | React & React Native Developer</p>
                   <p className='subtitleJob'>2 years</p>
-                  <p className='subtitleJob'>React Native, Redux, ReactJS, NodeJS, ES6</p>
+                  <p className='subtitleJob'>ReactJS, React Native, Redux, Typescript, NodeJS (NestJS and Express), GraphQL, REST, ES6</p>
 
                   <div className='iconJob' id='iconJob'
                     onClick={this.valueOnClick.bind(this, 'iconJob')}
@@ -409,6 +437,45 @@ class Home extends Component {
                   </div>
                 </div>
                }
+               
+            </div>
+
+            <div className='photosExperienceFourth' id='photosExperienceFourth'
+              onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceFourth', 'imageJobs')}
+              onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceFourth', 'imageJobs')}>
+
+              {!this.state.photosExperienceFourth ?
+                <img className='imageJobsKickid' id='imageJobsKickid' src={kickid}/>
+                 :
+                <div className='squareJob'>
+                  <p className='titleJob'>Team Lead Front-End | React & React Native Developer</p>
+                  <p className='subtitleJob'>1 year - Actual</p>
+                  <p className='subtitleJob'>ReactJS (with Hooks), React Native, Typescript, NodeJS (NestJS), GraphQL, ES2020</p>
+
+                  <div className='iconJob' id='iconJob'
+                    onClick={this.valueOnClick.bind(this, 'iconJob')}
+                    onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconJob')}
+                    onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconJob')}>
+                    <div className='iconsShine'>
+                      <div className='iconPlayShineApple' id='iconPlayShineApple' 
+                      onClick={this.valueOnClick.bind(this, 'iconPlayKickidWeb')} 
+                      onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlayShineApple')} 
+                      onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlayShineApple')}>
+                        <FontAwesomeIcon icon={['fab', 'chrome']} size='3x' />
+                      </div>
+                      <div className='separator' />
+                      <div className='iconPlayShineGoogle' id='iconPlayShineGoogle' 
+                      onClick={this.valueOnClick.bind(this, 'iconPlayKickidAndroid')} 
+                      onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconPlayShineGoogle')}
+                      onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconPlayShineGoogle')}>
+                        <FontAwesomeIcon icon={['fab', 'google-play']} size='3x' />
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+               }
+               
             </div>
           </div>
         </div>
@@ -437,7 +504,7 @@ class Home extends Component {
           </div>
           <div className='footer'>
             <div className='footerNameInside'>
-              <p className='footerName'>© 2019 Marcos Rodríguez Ordieres.</p>
+              <p className='footerName'>© 2020 Marcos Rodríguez Ordieres.</p>
             </div>
             <div id='iconsWorkFooter' className='iconsWorkFooter'>
               <div className='iconGithub' id='iconGithub' onClick={this.valueOnClick.bind(this, 'iconGithub')} onMouseEnter={this.onMouseEnterHandler.bind(this, 'iconGithub')} onMouseLeave={this.onMouseLeaveHandler.bind(this, 'iconGithub')}>
