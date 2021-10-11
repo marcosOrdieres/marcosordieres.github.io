@@ -322,7 +322,6 @@ class Home extends Component {
             </div>
 
 
-
             <div onClick={() => window.open("https://github.com/marcosOrdieres/feetFat", "_blank")} className='tableProject' id='tableProject'
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'tableProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'tableProject')}>
