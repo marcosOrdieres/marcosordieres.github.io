@@ -2,22 +2,26 @@
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 50;
-  src: url("./assets/fonts/RobotoSlab-Regular.ttf"); }
+  src: url('./assets/fonts/RobotoSlab-Regular.ttf');
+}
 
 @font-face {
   font-family: 'Roboto Slab Slim';
   font-style: normal;
   font-weight: 30;
-  src: url("./assets/fonts/RobotoSlab-Regular.ttf"); }
+  src: url('./assets/fonts/RobotoSlab-Regular.ttf');
+}
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   font-family: sans-serif;
   background: white;
-  color: #393c45; }
+  color: #393c45;
+}
 
 .home {
   display: table-cell;
@@ -32,7 +36,8 @@ body, html {
   background-size: cover;
   opacity: 0.8;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .secondPartText {
   margin-top: 100vh;
@@ -44,7 +49,8 @@ body, html {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .secondPartProjects {
   margin-top: 200vh;
@@ -57,7 +63,8 @@ body, html {
   width: 100%;
   display: flex;
   background-color: #595959;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .experience {
   margin-top: 300vh;
@@ -69,7 +76,8 @@ body, html {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .contactMe {
   margin-top: 400vh;
@@ -81,7 +89,8 @@ body, html {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .contact {
   display: flex;
@@ -89,14 +98,16 @@ body, html {
   background-color: blue;
   text-align: center;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .footer {
   display: flex;
   flex: 0.2;
   flex-direction: row;
   background-color: #333333;
-  align-items: center; }
+  align-items: center;
+}
 
 .contactEmail {
   display: flex;
@@ -104,23 +115,28 @@ body, html {
   background-color: #3a6ee8;
   text-align: center;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .contactPlace {
   display: flex;
   flex: 0.5;
-  background-color: white; }
+  background-color: white;
+}
 
 .leaflet-container {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .leaflet-div-icon {
   background: transparent;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+}
 
 .separator {
-  width: 30px; }
+  width: 30px;
+}
 
 .name {
   padding-top: 1%;
@@ -133,50 +149,59 @@ body, html {
   display: flex;
   flex: 0.1;
   flex-direction: row;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconGithub {
   padding-left: 2%;
   padding-right: 2%;
   color: #f6f7f8;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconLinkedin {
   padding-left: 2%;
   padding-right: 2%;
   color: #f6f7f8;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconEmail {
   padding-left: 2%;
   padding-right: 2%;
   color: #f6f7f8;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconPlay {
   padding-left: 2%;
   padding-right: 2%;
   color: #f6f7f8;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconGithubFooter {
   padding-left: 2%;
   padding-right: 2%;
   size: 5px;
   color: #f6f7f8;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconPlayShineApple {
   color: black;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconPlayShineGoogle {
   color: black;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .iconsShine {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 .iconsWork {
   display: flex;
@@ -185,106 +210,122 @@ body, html {
   justify-content: flex-end;
   padding-right: 2%;
   align-items: center;
-  flex: 0.5; }
+  flex: 0.5;
+}
 
 .nameInside {
   padding-top: 1%;
   display: flex;
-  flex: 0.5; }
+  flex: 0.5;
+}
 
 .iconOnly {
-  padding: 10px 10px 10px 10px; }
+  padding: 10px 10px 10px 10px;
+}
 
 .middleText {
   text-align: center;
   font-size: 5em;
   font-family: 'Roboto Slab';
-  color: #bfbfbf; }
+  color: #bfbfbf;
+}
 
 .secondPartTitle {
   font-size: 3em;
   font-family: 'Roboto Slab';
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+}
 
 .thirdPartTitle {
   font-size: 3em;
   font-family: 'Roboto Slab';
   color: white;
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+}
 
 .colorWhite {
-  color: white; }
+  color: white;
+}
 
 .secondPartSubtitle {
   font-size: 1.4em;
   font-family: 'Roboto Slab';
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+}
 
-  .secondPartSubtitleGithub {
-    font-size: 1.5em;
-    font-family: 'Roboto Slab';
-    text-decoration: underline;
-    }
+.secondPartSubtitleGithub {
+  font-size: 1.5em;
+  font-family: 'Roboto Slab';
+  text-decoration: underline;
+}
 
-    .secondPartSubtitleGithub:hover {
-      font-size: 1.6em;
-      opacity:0.5;
-      cursor: pointer;
-      }
+.secondPartSubtitleGithub:hover {
+  font-size: 1.6em;
+  opacity: 0.5;
+  cursor: pointer;
+}
 
-  .secondPartSubtitleBold {
-    font-size: 1.5em;
-    font-family: 'Roboto Slab';
-    font-weight: 400;}
+.secondPartSubtitleBold {
+  font-size: 1.5em;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+}
 
 .secondPartSubtitleSkills {
   font-size: 1.8em;
   font-family: 'Roboto Slab';
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+}
 
 #word {
   font-family: 'Roboto Slab Slim';
   color: #ffc84c;
   padding-top: 20px;
   font-weight: 10;
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 .rowText {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10%;
   vertical-align: middle;
-  max-width: 500px;
+  max-width: 300px;
   line-height: 90px;
-  flex: 0.9; }
+  flex: 0.9;
+}
 
 .nameTitle {
-  color: #ffc84c; }
+  color: #ffc84c;
+}
 
 .firstCol {
   display: flex;
   flex-direction: column;
   flex: 0.25;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .secondCol {
   flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .thirdCol {
   flex: 0.375;
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .titleText {
   flex: 0.2;
@@ -293,11 +334,13 @@ body, html {
   align-items: flex-end;
   flex-direction: flex-end;
   text-align: flex-end;
-  padding-top: 3%; }
+  padding-top: 3%;
+}
 
 .titleText p {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .subtitleText {
   flex: 0.8;
@@ -305,7 +348,8 @@ body, html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .whoIsMarcosText {
   flex: 0.5;
@@ -314,7 +358,8 @@ body, html {
   align-items: center;
   text-align: center;
   border-bottom: 2px solid #595959;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .whoIsMarcosTextMiddle {
   flex: 0.5;
@@ -322,7 +367,8 @@ body, html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .whoIsMarcosTextDown {
   flex: 0.5;
@@ -331,7 +377,8 @@ body, html {
   align-items: center;
   text-align: center;
   border-top: 2px solid #595959;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .whoIsMarcosTextHalfRight {
   flex: 0.5;
@@ -339,121 +386,136 @@ body, html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-right: 2px solid #595959; }
+  border-right: 2px solid #595959;
+}
 
 .whoIsMarcosTextHalf {
   flex: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .backpackerProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .bombProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .ghostProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .tableProject {
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .textExperience {
   display: flex;
   flex-direction: column;
-  flex: 0.5; }
+  flex: 0.5;
+}
 
 .photosExperience {
   display: flex;
   flex-direction: row;
-  flex: 0.5; }
+  flex: 0.5;
+}
 
 .textExperienceTitle {
   display: flex;
   flex: 0.5;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
-
-.textExperienceTitle p {
-  display: inline-block;
-  vertical-align: top; }
+  align-items: center;
+}
 
 .textExperienceSubtitle {
   display: flex;
   flex: 0.5;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start; }
+  align-items: flex-start;
+}
 
 .photosExperienceFirst {
   display: flex;
   flex: 0.333;
   align-items: center;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+}
 
 .photosExperienceSecond {
   display: flex;
   flex: 0.333;
   align-items: center;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+}
 
 .photosExperienceThird {
   display: flex;
   flex: 0.333;
   align-items: center;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+}
 
 .photosExperienceFourth {
   display: flex;
   flex: 0.333;
   align-items: center;
   justify-content: center;
-  background-color: white; }
+  background-color: white;
+}
 
 .imageJobsPrometeo {
   width: 50%;
   padding-bottom: 30px;
-  height: 20%; }
+  height: 20%;
+}
 
 .imageJobsCap {
   width: 70%;
-  height: 40%; }
+  height: 40%;
+}
 
 .textExperienceTitleP {
   font-size: 3em;
   align-items: center;
   font-family: 'Roboto Slab';
-  color: #595959; }
+  color: #595959;
+}
 
 .textExperienceUnderscore {
   font-size: 1em;
-  color: #ffc84c; }
+  color: #ffc84c;
+}
 
 .textTitleUnderscore {
   font-size: 1em;
-  color: #ffc84c; }
+  color: #ffc84c;
+}
 
 .textExperienceSubtitleP {
   font-size: 1.8em;
@@ -461,11 +523,13 @@ body, html {
   font-family: 'Roboto Slab';
   color: #595959;
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+}
 
 .squareJob p {
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+}
 
 .contactEmailRectangle {
   width: 60%;
@@ -476,18 +540,21 @@ body, html {
   border-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .contactEmailP {
   font-size: 3em;
   font-family: 'Roboto Slab';
-  color: white; }
+  color: white;
+}
 
 .footer p {
   font-size: 1em;
   padding-left: 5%;
   font-family: 'Roboto Slab';
-  color: #bfbfbf; }
+  color: #bfbfbf;
+}
 
 .iconsWorkFooter {
   display: flex;
@@ -495,71 +562,94 @@ body, html {
   flex-direction: row;
   padding-bottom: 2%;
   padding-right: 2%;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+}
 
 .footerNameInside {
   display: flex;
-  flex: 0.5; }
+  flex: 0.5;
+}
 
 .squareJob {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .titleJob {
   font-size: 1.3em;
   font-family: 'Roboto Slab';
-  color: black; }
+  color: black;
+}
 
 .subtitleJob {
   font-size: 1em;
   font-family: 'Roboto Slab';
-  color: black; }
+  color: black;
+}
 
 .iconJob {
   color: black;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 @media screen and (max-width: 1444px) {
   .secondPartSubtitle {
-    font-size: 0.7em; } }
+    font-size: 0.7em;
+  }
+}
 
 @media screen and (max-width: 1204px) {
   .contactEmailP {
-    font-size: xx-large; }
+    font-size: xx-large;
+  }
   .secondPartSubtitle {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .middleText {
-    font-size: 4em; }
+    font-size: 4em;
+  }
   .name {
-    font-size: 0.2em; }
+    font-size: 0.2em;
+  }
   .imageJobsPrometeo {
     width: 30%;
-    height: 20%; }
+    height: 20%;
+  }
   .imageJobsCap {
     width: 40%;
-    height: 40%; }
+    height: 40%;
+  }
   .imageJobsShine {
     width: 15%;
-    height: 60%; } 
+    height: 60%;
   }
+}
 
 @media screen and (max-width: 600px) {
   .contactEmailP {
-    font-size: xx-large; }
+    font-size: xx-large;
+  }
   .secondPartSubtitle {
-    font-size: 0.8em; }
+    font-size: 0.8em;
+  }
   .middleText {
-    font-size: 4em; }
+    font-size: 4em;
+  }
   .name {
-    font-size: 0.2em; }
+    font-size: 0.2em;
+  }
   .imageJobsPrometeo {
     width: 30%;
-    height: 20%; }
+    height: 20%;
+  }
   .imageJobsCap {
     width: 40%;
-    height: 40%; }
+    height: 40%;
+  }
   .imageJobsShine {
     width: 15%;
-    height: 60%; } }
+    height: 60%;
+  }
+}

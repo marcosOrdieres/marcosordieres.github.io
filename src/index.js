@@ -1,33 +1,15 @@
 import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter} from 'react-router-dom';
-import {createStore, applyMiddleware} from 'redux';
-import {Provider} from 'react-redux';
-import thunkMiddleware from 'redux-thunk';
-import { createLogger } from 'redux-logger';
-import reducer from './reducers';
+import { HashRouter } from 'react-router-dom';
 import App from './containers/App';
-
-import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 
-const loggerMiddleware = createLogger();
-
-const store = createStore(
-  reducer,
-  applyMiddleware(
-    thunkMiddleware,
-    loggerMiddleware
-  )
-);
 
 ReactDOM.render(
-  <Provider store={store}>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </Provider>,
+  <HashRouter>
+    <App />
+  </HashRouter>,
   document.getElementById('root')
 );
 

@@ -10,7 +10,8 @@
   font-weight: 30;
   src: url("./assets/fonts/RobotoSlab-Regular.ttf"); }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -256,7 +257,7 @@ body, html {
   margin-right: auto;
   padding-top: 10%;
   vertical-align: middle;
-  max-width: 500px;
+  max-width: 300px;
   line-height: 90px;
   flex: 0.9; }
 
@@ -390,10 +391,6 @@ body, html {
   flex-direction: row;
   justify-content: center;
   align-items: center; }
-
-.textExperienceTitle p {
-  display: inline-block;
-  vertical-align: top; }
 
 .textExperienceSubtitle {
   display: flex;

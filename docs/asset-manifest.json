@@ -1,16 +1,29 @@
 {
-  "main.css": "static/css/main.53662eca.css",
-  "main.css.map": "static/css/main.53662eca.css.map",
-  "main.js": "static/js/main.5044a963.js",
-  "main.js.map": "static/js/main.5044a963.js.map",
-  "static/media/RobotoSlab-Regular.ttf": "static/media/RobotoSlab-Regular.1ec06eed.ttf",
-  "static/media/backgroundDeveloper.png": "static/media/backgroundDeveloper.4e934472.png",
-  "static/media/bomb.png": "static/media/bomb.5163c2bd.png",
-  "static/media/capgemini.png": "static/media/capgemini.faab077a.png",
-  "static/media/clock.png": "static/media/clock.9723d946.png",
-  "static/media/iconPlayBackpacker.png": "static/media/iconPlayBackpacker.8872047b.png",
-  "static/media/iconPlayBomb.png": "static/media/iconPlayBomb.b6bfbafb.png",
-  "static/media/photoApp.png": "static/media/photoApp.0c19c9d3.png",
-  "static/media/poke.svg": "static/media/poke.b74b1049.svg",
-  "static/media/tableGame.png": "static/media/tableGame.af64a364.png"
+  "files": {
+    "main.css": "/portfolio/static/css/main.a4a1d2ad.chunk.css",
+    "main.js": "/portfolio/static/js/main.ad59b1ef.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ad59b1ef.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.37da8305.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.37da8305.js.map",
+    "static/js/2.cd454fe9.chunk.js": "/portfolio/static/js/2.cd454fe9.chunk.js",
+    "static/js/2.cd454fe9.chunk.js.map": "/portfolio/static/js/2.cd454fe9.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.a4a1d2ad.chunk.css.map": "/portfolio/static/css/main.a4a1d2ad.chunk.css.map",
+    "static/js/2.cd454fe9.chunk.js.LICENSE.txt": "/portfolio/static/js/2.cd454fe9.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/portfolio/static/media/backgroundDeveloper.246262bb.png",
+    "static/media/bomb.87e91829.png": "/portfolio/static/media/bomb.87e91829.png",
+    "static/media/capgemini.49477793.png": "/portfolio/static/media/capgemini.49477793.png",
+    "static/media/clock.645cc1eb.png": "/portfolio/static/media/clock.645cc1eb.png",
+    "static/media/desktopUnsplash.41f68b77.png": "/portfolio/static/media/desktopUnsplash.41f68b77.png",
+    "static/media/iconPlayBomb.f6772da7.png": "/portfolio/static/media/iconPlayBomb.f6772da7.png",
+    "static/media/iconUnsplash.16f57cf2.png": "/portfolio/static/media/iconUnsplash.16f57cf2.png",
+    "static/media/poke.svg": "/portfolio/static/media/poke.8a236cbf.svg",
+    "static/media/tableGame.61a5fcef.png": "/portfolio/static/media/tableGame.61a5fcef.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37da8305.js",
+    "static/js/2.cd454fe9.chunk.js",
+    "static/css/main.a4a1d2ad.chunk.css",
+    "static/js/main.ad59b1ef.chunk.js"
+  ]
 }
