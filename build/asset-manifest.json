@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a4a1d2ad.chunk.css",
+    "main.js": "/portfolio/static/js/main.832320f1.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.832320f1.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.37da8305.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.37da8305.js.map",
+    "static/js/2.890a4254.chunk.js": "/portfolio/static/js/2.890a4254.chunk.js",
+    "static/js/2.890a4254.chunk.js.map": "/portfolio/static/js/2.890a4254.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.a4a1d2ad.chunk.css.map": "/portfolio/static/css/main.a4a1d2ad.chunk.css.map",
+    "static/js/2.890a4254.chunk.js.LICENSE.txt": "/portfolio/static/js/2.890a4254.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/portfolio/static/media/backgroundDeveloper.246262bb.png",
+    "static/media/bomb.87e91829.png": "/portfolio/static/media/bomb.87e91829.png",
+    "static/media/capgemini.49477793.png": "/portfolio/static/media/capgemini.49477793.png",
+    "static/media/clock.645cc1eb.png": "/portfolio/static/media/clock.645cc1eb.png",
+    "static/media/desktopUnsplash.41f68b77.png": "/portfolio/static/media/desktopUnsplash.41f68b77.png",
+    "static/media/iconPlayBomb.f6772da7.png": "/portfolio/static/media/iconPlayBomb.f6772da7.png",
+    "static/media/iconUnsplash.16f57cf2.png": "/portfolio/static/media/iconUnsplash.16f57cf2.png",
+    "static/media/poke.svg": "/portfolio/static/media/poke.8a236cbf.svg",
+    "static/media/tableGame.61a5fcef.png": "/portfolio/static/media/tableGame.61a5fcef.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37da8305.js",
+    "static/js/2.890a4254.chunk.js",
+    "static/css/main.a4a1d2ad.chunk.css",
+    "static/js/main.832320f1.chunk.js"
+  ]
+}
