@@ -10,10 +10,8 @@ import pokeImage from '../../public/images/poke.svg';
 
 import shineImage from '../../public/images/shine.png';
 import capgeminiImage from '../../public/images/capgemini.png';
-import prometeoImage from '../../public/images/prometeo.png';
 
 import kickid from '../../public/images/kickid.jpeg';
-
 
 import iconUnsplash from '../../public/images/iconUnsplash.png';
 import iconPlayBomb from '../../public/images/iconPlayBomb.png';
@@ -97,6 +95,8 @@ class Home extends Component {
         return window.open('http://www.prometeoinnovations.com/', '_blank');
       case 'imageTable':
         return window.open('https://marcosordieres.github.io/TableJS/', '_blank');
+      default:
+        return window.open('https://github.com/marcosOrdieres', '_blank');
     }
   }
 
@@ -161,7 +161,7 @@ class Home extends Component {
   }
 
   renderMarkers(map, maps) {
-    let marker = new maps.Marker({
+    new maps.Marker({
       position: { lat: 52.560103, lng: 13.414957 },
       icon: pokeImage,
       map
@@ -261,7 +261,7 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'backpackerProject')}>
               {/* {this.state.isPhone ? <div className="rectangleBackpackerProject"></div> : <div className="rectangleBackpackerProject"></div>} */}
               <div>
-                <img src={iconUnsplash} width='15%' height='15%' />
+                <img alt='' src={iconUnsplash} width='15%' height='15%' />
               </div>
 
               {this.state.backpackerProject ?
@@ -269,7 +269,7 @@ class Home extends Component {
                   <h5 className='colorWhite'>UNSPLASH REACT PROJECT</h5>
                   <h6 className='colorWhite'>React + Typescript Project</h6>
                   <p className='colorWhite'>React + Redux small application flavoured with Typescript, Hooks, styled-components, Jest, react-test-component...</p>
-                  <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={desktopUnsplash} width='15%' height='15%' />
+                  <img alt='' onClick={this.valueOnClick.bind(this, 'iconPlay')} src={desktopUnsplash} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -284,7 +284,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'bombProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'bombProject')}>
               <div>
-                <img src={imageTable} width='35%' height='70%' />
+                <img alt='' src={imageTable} width='35%' height='70%' />
               </div>
 
               {this.state.bombProject ?
@@ -292,7 +292,7 @@ class Home extends Component {
                   <h5 className='colorWhite'>TABLE PRODUCT LIST</h5>
                   <h6 className='colorWhite'>React + Typescript Project</h6>
                   <p className='colorWhite'>Product List with different characteristics to see every detail from the Product you would like to buy.</p>
-                  <img onClick={this.valueOnClick.bind(this, 'imageTable')} src={imageTable} width='15%' height='15%' />
+                  <img alt='' onClick={this.valueOnClick.bind(this, 'imageTable')} src={imageTable} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -311,7 +311,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'ghostProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'ghostProject')}>
               <div>
-                <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={clock} width='35%' height='70%' />
+                <img alt='' onClick={this.valueOnClick.bind(this, 'iconPlay')} src={clock} width='35%' height='70%' />
               </div>
 
               {this.state.ghostProject ?
@@ -319,7 +319,7 @@ class Home extends Component {
                   <h5 className='colorWhite'>Time Converter</h5>
                   <h6 className='colorWhite'>npm package made with Javascript</h6>
                   <p className='colorWhite'>Small Project using TDD and Jest</p>
-                  <img src={clock} width='15%' height='15%' />
+                  <img alt='' src={clock} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -333,7 +333,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'tableProject')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'tableProject')}>
               <div>
-                <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={imageBomb} width='35%' height='70%' />
+                <img alt='' onClick={this.valueOnClick.bind(this, 'iconPlay')} src={imageBomb} width='35%' height='70%' />
               </div>
 
               {this.state.tableProject ?
@@ -341,7 +341,7 @@ class Home extends Component {
                   <h5 className='colorWhite'>Fat Foot Challenge</h5>
                   <h6 className='colorWhite'>React Native Project</h6>
                   <p className='colorWhite'>Game made in React Native (with Hooks) and Typescript</p>
-                  <img onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBomb} width='15%' height='15%' />
+                  <img alt='' onClick={this.valueOnClick.bind(this, 'iconPlay')} src={iconPlayBomb} width='15%' height='15%' />
                 </div>
                 :
                 null
@@ -375,7 +375,7 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceFourth', 'imageJobs')}>
 
               {!this.state.photosExperienceFourth ?
-                <img className='imageJobsKickid' id='imageJobsKickid' src={kickid} />
+                <img alt='' className='imageJobsKickid' id='imageJobsKickid' src={kickid} />
                 :
                 <div className='squareJob'>
                   <p className='titleJob'>Frontend Developer</p>
@@ -412,7 +412,7 @@ class Home extends Component {
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceThird', 'imageJobs')}>
 
               {!this.state.photosExperienceThird ?
-                <img className='imageJobsShine' id='imageJobs' src={shineImage} />
+                <img alt='' className='imageJobsShine' id='imageJobs' src={shineImage} />
                 :
                 <div className='squareJob'>
                   <p className='titleJob'>Full Stack Developer</p>
@@ -442,7 +442,7 @@ class Home extends Component {
               onMouseEnter={this.onMouseEnterHandlerProject.bind(this, 'photosExperienceSecond', 'imageJobs')}
               onMouseLeave={this.onMouseLeaveHandlerProject.bind(this, 'photosExperienceSecond', 'imageJobs')}>
               {!this.state.photosExperienceSecond ?
-                <img className='imageJobsCap' id='imageJobs' src={capgeminiImage} />
+                <img alt='' className='imageJobsCap' id='imageJobs' src={capgeminiImage} />
                 :
                 <div className='squareJob'>
                   <p className='titleJob'>Intern Full Stack Developer</p>
