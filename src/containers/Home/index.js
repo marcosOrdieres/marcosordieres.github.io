@@ -300,11 +300,6 @@ class Home extends Component {
             </div>
 
 
-
-
-
-
-
           </div>
           <div className='flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row  thirdCol'>
             <div onClick={() => window.open("https://github.com/marcosOrdieres/time-converter", "_blank")} className='ghostProject' id='ghostProject'
@@ -325,7 +320,6 @@ class Home extends Component {
                 null
               }
             </div>
-
 
 
 
