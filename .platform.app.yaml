@@ -1,0 +1,14 @@
+name: app
+type: nodejs:16
+build:
+  flavor: none
+  commands:
+    build: yarn build
+relationships:
+  database: "database:postgresql"
+web:
+  locations:
+    "/":
+      root: "build/"
+      index: "index.html"
+      passthru: "/index.html"
