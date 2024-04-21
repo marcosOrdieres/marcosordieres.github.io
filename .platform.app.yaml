@@ -1,14 +1,15 @@
 name: app
+name: app
 type: nodejs:16
+
 build:
   flavor: none
   commands:
-    build: yarn build
-relationships:
-  database: "database:postgresql"
+    build: yarn build  # The build command
+
 web:
   locations:
-    "/":
-      root: "build/"
-      index: "index.html"
-      passthru: "/index.html"
+    '/':
+      root: 'build/'  # Root directory for the web server
+      index: true  # Ensures that index.html is served for requests to '/'
+      passthru: '/index.html'  # SPA routing (optional)
